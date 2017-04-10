@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+.piece {
+  padding: 2em 0;
+}
+
+.piece .piece__text {
+  width: 75%;
+}
+
+.piece .piece__text h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  margin: 0;
+}
+
+.piece .piece__text p {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding-right: 2em;
+}
+
+.piece .piece__img {
+  width: 25%;
+}
+
+.piece .piece__img img {
+  float: left;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* Small devices (tablets, 768px and up), @screen-sm-min */
+@media (min-width: 768px) {
+  .piece {
+    padding: 2em 2em;
+  }
+}
+
+/* Medium devices (desktops, 992px and up), @screen-md-min */
+@media (min-width: 992px) {
+  .piece {
+    padding: 2em 3.5em;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up), @screen-lg-min */
+@media (min-width: 1200px) {
+  .piece {
+    padding: 2em 5.5em;
+  }
+}
