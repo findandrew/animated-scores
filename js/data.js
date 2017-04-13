@@ -1,10 +1,10 @@
 var pieces = [
   {
-    'title' : 'Title 1',
-    'description' : 'Description of the piece goes here',
-    'img' : 'img/line-graph.png',
+    'title' : 'Phase 1',
+    'description' : 'Descending columns falling a separate but regular intervals creating a phasing pattern.',
+    'img' : 'img/phase-one.png',
     'class' : 'js-title',
-    'data_title' : 'title_1'
+    'data_title' : 'phase_one'
   },
   {
     'title' : 'Title 2',

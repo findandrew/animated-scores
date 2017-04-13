@@ -1,0 +1,45 @@
+.phase-one {
+  width: 100%;
+  height: 100%;
+}
+
+.phase-one .col-container {
+  width: 10%;
+  height: 100%;
+  float: left;
+  animation-name: col-container;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+  animation-play-state: paused;
+}
+@keyframes col-container {
+  0%   { background-color: white; }
+  100% { background-color: black; }
+}
+
+.phase-one .bar {
+  width: 50%;
+  margin: 0 auto;
+  background-color: yellow;
+  animation-name: bar;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-play-state: paused;
+}
+@keyframes bar {
+  0%   { height: 0%; }
+  100% { height: 100%; }
+}
+
+.phase-one #a, .phase-one #a .bar { animation-duration: 14000ms; }
+.phase-one #b, .phase-one #b .bar { animation-duration: 13000ms; }
+.phase-one #c, .phase-one #c .bar { animation-duration: 12000ms; }
+.phase-one #d, .phase-one #d .bar { animation-duration: 11000ms; }
+.phase-one #e, .phase-one #e .bar { animation-duration: 10000ms; }
+.phase-one #f, .phase-one #f .bar { animation-duration: 9000ms; }
+.phase-one #g, .phase-one #g .bar { animation-duration: 8000ms; }
+.phase-one #h, .phase-one #h .bar { animation-duration: 7000ms; }
+.phase-one #i, .phase-one #i .bar { animation-duration: 6000ms; }
+.phase-one #j, .phase-one #j .bar { animation-duration: 5000ms; }

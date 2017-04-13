@@ -28,17 +28,25 @@ function showScoreList() {
   createTriggers();
 }
 
-function showScore(title) {
+function showScore(string) {
+  var view = getScoreView(string);
   $( 'body' ).empty();
-  $( 'body' ).append('<h4>hello world</h4>');
+  $( 'body' ).append(view);
+
+  // Start phase-one (needs to be moved into its own method)
+  $( ".phase-one .col-container" ).css( "animation-play-state", "running" );
+  $( ".phase-one .bar" ).css( "animation-play-state", "running" );
+  
   createTriggers();
 }
 
 function showScoreInfo(piece) {
-  var pieceObj = findPiece(piece);
+  var pieceObj   = findPiece(piece);
+  var title      = pieceObj.title
+  var data_title = pieceObj.data_title
 
   $( 'body' ).empty();
-  $( 'body' ).append( scoreInfo(pieceObj.title) );
+  $( 'body' ).append( scoreInfo(title, data_title) );
   createTriggers();
 }
 
@@ -57,6 +65,9 @@ function createTriggers() {
   })
   $( '.js-show-score-list' ).click(function() {
     showScoreList();
+  })
+  $( '.js-show-show-score' ).click(function() {
+    showScore($( this ).data('title'));
   })
 }
 
