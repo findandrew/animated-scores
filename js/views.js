@@ -18,12 +18,15 @@ function individualScore(piece) {
 function scoreInfo(title) {
   string =
     '<div class="score-info">\
-      <div class="buttons">\
+      <button type="button" class="btn btn-default btn-lg btn-back js-show-score-list">\
+        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>\
+        Back to list\
+      </button>\
+      <div class="content">\
         <h4>'+title+'</h4>\
-        <button class="js-show-score-list">\
-          Back\
+        <button type="button" class="btn btn-default btn-lg btn-play">\
+          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>\
         </button>\
-        <button>Begin</button>\
       </div>\
     </div>'
   return string

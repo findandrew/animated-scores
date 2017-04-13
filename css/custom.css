@@ -65,14 +65,29 @@
 ***** SCORE INFO
 ****/
 
-.buttons {
+.score-info .btn-back {
+  position: fixed;
+  top: .5em;
+  left: .5em;
+  border: none;
+  border-radius: 0px;
+}
+
+.score-info .content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.buttons h4 {
-  text-align: center;
-  padding-bottom: 2em;
+.score-info .content h4 {
+  padding-bottom: 0.5em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+}
+
+.score-info .content .btn-play {
+  font-size: 4em;
+  line-height: 1;
 }
