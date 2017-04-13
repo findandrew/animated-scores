@@ -1,41 +1,3 @@
-var pieces = [
-  {
-    'title' : 'Title 1',
-    'description' : 'Description of the piece goes here',
-    'img' : 'img/line-graph.png'
-  },
-  {
-    'title' : 'Title 2',
-    'description' : 'Description of the piece goes here Description of the piece goes here Description of the piece goes here Description of the piece goes here',
-    'img' : 'img/line-graph.png'
-  },
-  {
-    'title' : 'Title 3',
-    'description' : 'Description of the piece goes here',
-    'img' : 'img/line-graph.png'
-  },
-  {
-    'title' : 'Title 4',
-    'description' : 'Description of the piece goes here Description of the piece goes here Description of the piece goes here',
-    'img' : 'img/line-graph.png'
-  },
-  {
-    'title' : 'Title 5',
-    'description' : 'Description of the piece goes here Description of the piece goes here',
-    'img' : 'img/line-graph.png'
-  },
-  {
-    'title' : 'Title 6',
-    'description' : 'Description of the piece goes here',
-    'img' : 'img/line-graph.png'
-  },
-  {
-    'title' : 'Title 7',
-    'description' : 'Description of the piece goes here',
-    'img' : 'img/line-graph.png'
-  }
-]
-
 function pairArray(a) {
   // Thanks to Jason Cust: 
   // http://stackoverflow.com/a/31352555
@@ -50,29 +12,55 @@ function pairArray(a) {
 function showScoreList() {
   var pairs = pairArray(pieces);
 
+  $( 'body' ).empty();
   $( 'body' ).append('<div class="container"></div>');
 
   $.each(pairs, function(index, pair) {
     $( '.container' ).append('<div class="row">');
 
     $.each(pair, function(index, piece) {
-      $( '.container' ).append(
-        '<div class="piece col-xs-12 col-sm-6">\
-          <div class="piece__text pull-left">\
-            <h4>'+piece['title']+'</h4>\
-            <p>'+piece['description']+'</p>\
-          </div>\
-          <div class="piece__img pull-right">\
-            <img src="'+piece['img']+'" />\
-          </div>\
-        </div>'
-      );
+      $( '.container' ).append( individualScore(piece) );
     })
 
     $( '.container' ).append('</div>');
+  })
+
+  createTriggers();
+}
+
+function showScore(title) {
+  $( 'body' ).empty();
+  $( 'body' ).append('<h4>hello world</h4>');
+  createTriggers();
+}
+
+function showScoreInfo(piece) {
+  var pieceObj = findPiece(piece);
+
+  $( 'body' ).empty();
+  $( 'body' ).append( scoreInfo(pieceObj.title) );
+  createTriggers();
+}
+
+function findPiece(piece) {
+  var data_title = $( piece ).data('title');
+  var obj = pieces.filter(function ( obj ) {
+      return obj.data_title === data_title;
+  })[0];
+
+  return obj
+}
+
+function createTriggers() {
+  $( '.js-title' ).click(function() {
+    showScoreInfo(this);
+  })
+  $( '.js-show-score-list' ).click(function() {
+    showScoreList();
   })
 }
 
 $( document ).ready(function() {
   showScoreList();
+  createTriggers();
 });

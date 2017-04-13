@@ -18,6 +18,11 @@
   margin: 0;
 }
 
+.piece .piece__text h4:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .piece .piece__text p {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
@@ -53,4 +58,21 @@
   .piece {
     padding: 2em 5.5em;
   }
+}
+
+
+/****
+***** SCORE INFO
+****/
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buttons h4 {
+  text-align: center;
+  padding-bottom: 2em;
 }
