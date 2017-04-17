@@ -96,3 +96,19 @@ html, body {
   font-size: 4em;
   line-height: 1;
 }
+
+
+/****
+***** SHOW SCORE
+****/
+
+.show-score-buttons {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  opacity: 0;
+}
+
+.show-score-buttons:hover {
+  opacity: 1;
+}

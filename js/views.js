@@ -36,17 +36,23 @@ function scoreInfo(title, data_title) {
 function getScoreView(data_title) {
   if (data_title == 'phase_one') {
     phase_one =
-      '<div class="phase-one">\
-        <div id="a" class="col-container"><div class="bar"></div></div>\
-        <div id="b" class="col-container"><div class="bar"></div></div>\
-        <div id="c" class="col-container"><div class="bar"></div></div>\
-        <div id="d" class="col-container"><div class="bar"></div></div>\
-        <div id="e" class="col-container"><div class="bar"></div></div>\
-        <div id="f" class="col-container"><div class="bar"></div></div>\
-        <div id="g" class="col-container"><div class="bar"></div></div>\
-        <div id="h" class="col-container"><div class="bar"></div></div>\
-        <div id="i" class="col-container"><div class="bar"></div></div>\
-        <div id="j" class="col-container"><div class="bar"></div></div>\
+      '<div class="show-score-buttons">\
+        <button type="button" class="btn btn-default btn-lg btn-back js-show-score-list">\
+          <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>\
+          Back to list\
+        </button>\
+      </div>\
+      <div class="phase-one">\
+        <div id="a" class="col-container a"><div class="bar a"></div></div>\
+        <div id="b" class="col-container b"><div class="bar b"></div></div>\
+        <div id="c" class="col-container a"><div class="bar a"></div></div>\
+        <div id="d" class="col-container b"><div class="bar b"></div></div>\
+        <div id="e" class="col-container a"><div class="bar a"></div></div>\
+        <div id="f" class="col-container b"><div class="bar b"></div></div>\
+        <div id="g" class="col-container a"><div class="bar a"></div></div>\
+        <div id="h" class="col-container b"><div class="bar b"></div></div>\
+        <div id="i" class="col-container a"><div class="bar a"></div></div>\
+        <div id="j" class="col-container b"><div class="bar b"></div></div>\
       </div>'
     return phase_one
   }

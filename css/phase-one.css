@@ -7,21 +7,29 @@
   width: 10%;
   height: 100%;
   float: left;
-  animation-name: col-container;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
   animation-direction: normal;
   animation-play-state: paused;
 }
-@keyframes col-container {
+.phase-one .col-container.a {
+  animation-name: col-container__a;
+}
+.phase-one .col-container.b {
+  animation-name: col-container__b;
+}
+@keyframes col-container__a {
   0%   { background-color: white; }
   100% { background-color: black; }
+}
+@keyframes col-container__b {
+  0%   { background-color: white; }
+  100% { background-color: #8d0000; } /* red */
 }
 
 .phase-one .bar {
   width: 50%;
   margin: 0 auto;
-  background-color: yellow;
   animation-name: bar;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -31,6 +39,12 @@
 @keyframes bar {
   0%   { height: 0%; }
   100% { height: 100%; }
+}
+.phase-one .bar.a {
+  background-color: #ffd900; /* yellow */
+}
+.phase-one .bar.b {
+  background-color: #ffaf00; /* yellow-orange */
 }
 
 .phase-one #a, .phase-one #a .bar { animation-duration: 14000ms; }
