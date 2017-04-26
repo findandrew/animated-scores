@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        $( "#foo" ).animate({left: "-20%",}, 20000, 'linear');
+      });
+    </script>
+
+    <style>
+      div {
+        height: 40px;
+        width: 40px;
+        background: orange;
+        position: fixed;
+        top: 50%;
+        left: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="foo">
+    </div>
+  </body>
+
+</html>
