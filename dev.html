@@ -6,26 +6,53 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script type="text/javascript">
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+
       $( document ).ready(function() {
-        $( "#foo" ).animate({left: "-20%",}, 20000, 'linear');
+        setInterval( function(){
+          var foo = getRandomInt(5, 95);
+          var bar = getRandomInt(5, 95);
+
+          $( "body" ).append( "<div class='foo' style='top:" + foo + "%'></div>" );
+          $( "body" ).append( "<div class='bar' style='top:" + bar + "%'></div>" );
+          $( ".foo" ).animate({left: "-20%",}, 20000, 'linear');
+          $( ".bar" ).animate({left: "-20%",}, 20000, 'linear');
+        }, 3000);
       });
     </script>
 
     <style>
-      div {
-        height: 40px;
-        width: 40px;
+      .foo {
+        height: 20px;
+        width: 80px;
+        background: blue;
+        position: fixed;
+        left: 100%;
+      }
+      .bar {
+        height: 20px;
+        width: 80px;
         background: orange;
         position: fixed;
-        top: 50%;
         left: 100%;
+      }
+      #cursor {
+        position: absolute;
+        height: 100%;
+        width: 5px;
+        background: red;
+        left: 35%;
+        top: 0;
       }
     </style>
   </head>
 
   <body>
-    <div id="foo">
-    </div>
+    <div id="cursor"></div>
   </body>
 
 </html>
