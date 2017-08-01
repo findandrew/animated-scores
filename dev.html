@@ -13,29 +13,50 @@
       }
 
       $( document ).ready(function() {
-        setInterval( function(){
-          var foo = getRandomInt(5, 95);
-          var bar = getRandomInt(5, 95);
+        // fill array of y-values
+        var notes = 10;
+        var y = [];
+        for(var i = 0; i < (notes * 2); i++) {
+          var temp = [];
+          temp.push(getRandomInt(5, 95));
+          temp.push(getRandomInt(5, 95));
+          y.push(temp);
+        }
 
-          $( "body" ).append( "<div class='foo' style='top:" + foo + "%'></div>" );
-          $( "body" ).append( "<div class='bar' style='top:" + bar + "%'></div>" );
-          $( ".foo" ).animate({left: "-20%",}, 20000, 'linear');
-          $( ".bar" ).animate({left: "-20%",}, 20000, 'linear');
-        }, 3000);
+        $.each(y, function(index, y) {
+          setInterval( function(){
+            $( "body" ).append( "<div class='foo' style='top:" + y[0] + "%'></div>" );
+            $( "body" ).append( "<div class='bar' style='top:" + y[1] + "%'></div>" );
+            $( ".foo" ).animate({left: "-20%",}, 20000, 'linear');
+            $( ".bar" ).animate({left: "-20%",}, 20000, 'linear');
+          }, index * 5000);
+        });
+
+        // setInterval( function(){
+        //   var foo = getRandomInt(5, 95);
+        //   var bar = getRandomInt(5, 95);
+
+        //   $( "body" ).append( "<div class='foo' style='top:" + foo + "%'></div>" );
+        //   $( "body" ).append( "<div class='bar' style='top:" + bar + "%'></div>" );
+        //   $( ".foo" ).animate({left: "-20%",}, 20000, 'linear');
+        //   $( ".bar" ).animate({left: "-20%",}, 20000, 'linear');
+        // }, 3000);
       });
     </script>
 
     <style>
       .foo {
-        height: 20px;
-        width: 80px;
+        height: 10px;
+        width: 150px;
+        border-radius: 5px;
         background: blue;
         position: fixed;
         left: 100%;
       }
       .bar {
-        height: 20px;
-        width: 80px;
+        height: 10px;
+        width: 150px;
+        border-radius: 5px;
         background: orange;
         position: fixed;
         left: 100%;
