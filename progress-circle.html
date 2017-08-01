@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <script src="js/progressbar.min.js"></script>
+
+    <script type="text/javascript">
+      window.onload = function onLoad() {
+        var circle = new ProgressBar.Circle('#progress', {
+          // options: http://progressbarjs.readthedocs.io/en/latest/api/shape/
+          duration: 30000,
+          color: '#FCB03C',
+          strokeWidth: 3,
+          trailColor: '#f4f4f4',
+          trailWidth: 3,
+          easing: 'linear',
+          text: {
+            value: '10',
+            className: 'inner_text',
+            style: {
+              color: 'black',
+              fontSize: '120px',
+              position: 'absolute',
+              left: '50%',
+              top: '50%',
+              padding: 0,
+              margin: 0,
+              transform: {
+                prefix: true,
+                value: 'translate(-50%, -50%)',
+              },
+            },
+          },
+          // autoStyleContainer: true,
+          // fill: 'rgba(0, 0, 0, 0.5)',
+          
+          // change over time:
+          // from: {
+          //   color: '#f4f4f4',
+          //   width: 30,
+          // },
+          // to: {
+          //   color: '#FCB03C',
+          //   width: 15,
+          // },
+          // step: function(state, circle, attachment) {
+          //     circle.path.setAttribute('stroke', state.color);
+          //     circle.path.setAttribute('stroke-width', state.width);
+          // },
+        });
+
+        circle.animate(1);
+      };
+    </script>
+
+    <style>
+      .progress {
+        height: 300px;
+        background-color: white;
+      }
+      .progress > svg {
+        height: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="progress" id="progress"></div>
+  </body>
+
+</html>
