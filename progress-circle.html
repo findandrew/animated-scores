@@ -10,14 +10,12 @@
 
         var circle1 = new ProgressBar.Circle('#progress1', {
           // options: http://progressbarjs.readthedocs.io/en/latest/api/shape/
-          // duration: 3000,
           color: '#b03cfc',
           strokeWidth: 3,
           trailColor: '#f4f4f4',
           trailWidth: 3,
           easing: 'linear',
           text: {
-            // value: '10',
             className: 'inner_text',
             style: {
               color: 'black',
@@ -33,34 +31,16 @@
               },
             },
           },
-          // autoStyleContainer: true,
-          // fill: 'rgba(0, 0, 0, 0.5)',
-          
-          // change over time:
-          // from: {
-          //   color: '#f4f4f4',
-          //   width: 30,
-          // },
-          // to: {
-          //   color: '#FCB03C',
-          //   width: 15,
-          // },
-          // step: function(state, circle, attachment) {
-          //     circle.path.setAttribute('stroke', state.color);
-          //     circle.path.setAttribute('stroke-width', state.width);
-          // },
         });
 
         var circle2 = new ProgressBar.Circle('#progress2', {
           // options: http://progressbarjs.readthedocs.io/en/latest/api/shape/
-          // duration: 3000,
           color: '#FCB03C',
           strokeWidth: 3,
           trailColor: '#f4f4f4',
           trailWidth: 3,
           easing: 'linear',
           text: {
-            // value: '10',
             className: 'inner_text',
             style: {
               color: 'black',
@@ -76,22 +56,6 @@
               },
             },
           },
-          // autoStyleContainer: true,
-          // fill: 'rgba(0, 0, 0, 0.5)',
-          
-          // change over time:
-          // from: {
-          //   color: '#f4f4f4',
-          //   width: 30,
-          // },
-          // to: {
-          //   color: '#FCB03C',
-          //   width: 15,
-          // },
-          // step: function(state, circle, attachment) {
-          //     circle.path.setAttribute('stroke', state.color);
-          //     circle.path.setAttribute('stroke-width', state.width);
-          // },
         });
 
         function makeCircle1() {
@@ -119,7 +83,11 @@
     <style>
       .progress {
         height: 300px;
+        width: 300px;
+        margin: 30px 0 0 30px;
+        float: left;
         background-color: white;
+        box-shadow: none;
       }
       .progress > svg {
         height: 100%;
