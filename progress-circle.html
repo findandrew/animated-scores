@@ -7,16 +7,17 @@
 
     <script type="text/javascript">
       window.onload = function onLoad() {
-        var circle = new ProgressBar.Circle('#progress', {
+
+        var circle1 = new ProgressBar.Circle('#progress1', {
           // options: http://progressbarjs.readthedocs.io/en/latest/api/shape/
-          duration: 30000,
-          color: '#FCB03C',
+          // duration: 3000,
+          color: '#b03cfc',
           strokeWidth: 3,
           trailColor: '#f4f4f4',
           trailWidth: 3,
           easing: 'linear',
           text: {
-            value: '10',
+            // value: '10',
             className: 'inner_text',
             style: {
               color: 'black',
@@ -50,7 +51,68 @@
           // },
         });
 
-        circle.animate(1);
+        var circle2 = new ProgressBar.Circle('#progress2', {
+          // options: http://progressbarjs.readthedocs.io/en/latest/api/shape/
+          // duration: 3000,
+          color: '#FCB03C',
+          strokeWidth: 3,
+          trailColor: '#f4f4f4',
+          trailWidth: 3,
+          easing: 'linear',
+          text: {
+            // value: '10',
+            className: 'inner_text',
+            style: {
+              color: 'black',
+              fontSize: '120px',
+              position: 'absolute',
+              left: '50%',
+              top: '50%',
+              padding: 0,
+              margin: 0,
+              transform: {
+                prefix: true,
+                value: 'translate(-50%, -50%)',
+              },
+            },
+          },
+          // autoStyleContainer: true,
+          // fill: 'rgba(0, 0, 0, 0.5)',
+          
+          // change over time:
+          // from: {
+          //   color: '#f4f4f4',
+          //   width: 30,
+          // },
+          // to: {
+          //   color: '#FCB03C',
+          //   width: 15,
+          // },
+          // step: function(state, circle, attachment) {
+          //     circle.path.setAttribute('stroke', state.color);
+          //     circle.path.setAttribute('stroke-width', state.width);
+          // },
+        });
+
+        function makeCircle1() {
+          circle1.set(0);
+          circle1.setText(Math.round(Math.random()*10));
+          circle1.animate(1, {
+            duration: 20000,
+          });
+        }
+        makeCircle1();
+        setInterval(function(){ makeCircle1(); }, 20000);
+
+        function makeCircle2() {
+          circle2.set(0);
+          circle2.setText(Math.round(Math.random()*10));
+          circle2.animate(1, {
+            duration: 22000,
+          });
+        }
+        makeCircle2();
+        setInterval(function(){ makeCircle2(); }, 22000);
       };
     </script>
 
@@ -67,7 +129,8 @@
   </head>
 
   <body>
-    <div class="progress" id="progress"></div>
+    <div class="progress" id="progress1"></div>
+    <div class="progress" id="progress2"></div>
   </body>
 
 </html>
