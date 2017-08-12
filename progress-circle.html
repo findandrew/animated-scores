@@ -3,80 +3,77 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/progressbar.min.js"></script>
 
     <script type="text/javascript">
       window.onload = function onLoad() {
+        var objects = [];
+        var colors = ['#503cfc','#b03cfc','#fc3ce8','#fcb03c','#3cfcb0','#fc503c','#fc3c88']
+        function makeCircle(i, objects){
+          // append html to body
+          $('body').append("<div class='progress' id='progress_"+i+"'></div>");
 
-        var circle1 = new ProgressBar.Circle('#progress1', {
-          // options: http://progressbarjs.readthedocs.io/en/latest/api/shape/
-          color: '#b03cfc',
-          strokeWidth: 3,
-          trailColor: '#f4f4f4',
-          trailWidth: 3,
-          easing: 'linear',
-          text: {
-            className: 'inner_text',
-            style: {
-              color: 'black',
-              fontSize: '120px',
-              position: 'absolute',
-              left: '50%',
-              top: '50%',
-              padding: 0,
-              margin: 0,
-              transform: {
-                prefix: true,
-                value: 'translate(-50%, -50%)',
+          // set temp el
+          var el = "#progress_"+i+"";
+
+          // set color
+          var random_color = colors[Math.floor(Math.random()*colors.length)]
+
+          // create object
+          var ob = new ProgressBar.Circle(el, {
+            // options: http://progressbarjs.readthedocs.io/en/latest/api/shape/
+            color: random_color,
+            strokeWidth: 3,
+            trailColor: '#f4f4f4',
+            trailWidth: 3,
+            easing: 'linear',
+            text: {
+              className: 'inner_text',
+              style: {
+                color: 'black',
+                fontSize: '120px',
+                position: 'absolute',
+                left: '50%',
+                top: '50%',
+                padding: 0,
+                margin: 0,
+                transform: {
+                  prefix: true,
+                  value: 'translate(-50%, -50%)',
+                },
               },
             },
-          },
-        });
-
-        var circle2 = new ProgressBar.Circle('#progress2', {
-          // options: http://progressbarjs.readthedocs.io/en/latest/api/shape/
-          color: '#FCB03C',
-          strokeWidth: 3,
-          trailColor: '#f4f4f4',
-          trailWidth: 3,
-          easing: 'linear',
-          text: {
-            className: 'inner_text',
-            style: {
-              color: 'black',
-              fontSize: '120px',
-              position: 'absolute',
-              left: '50%',
-              top: '50%',
-              padding: 0,
-              margin: 0,
-              transform: {
-                prefix: true,
-                value: 'translate(-50%, -50%)',
-              },
-            },
-          },
-        });
-
-        function makeCircle1() {
-          circle1.set(0);
-          circle1.setText(Math.round(Math.random()*10));
-          circle1.animate(1, {
-            duration: 20000,
           });
-        }
-        makeCircle1();
-        setInterval(function(){ makeCircle1(); }, 20000);
 
-        function makeCircle2() {
-          circle2.set(0);
-          circle2.setText(Math.round(Math.random()*10));
-          circle2.animate(1, {
-            duration: 22000,
-          });
+          // store object in array
+          objects.push(ob);
         }
-        makeCircle2();
-        setInterval(function(){ makeCircle2(); }, 22000);
+
+        var duration_options = [16000,18000,20000,22000,24000,26000];
+
+        function startCircle(i){
+          var random_duration = duration_options[Math.floor(Math.random()*duration_options.length)]
+
+          function animateCircle(object, duration) {
+            object.set(0);
+            object.setText(Math.round(Math.random()*10));
+            object.animate(1, {
+              duration: duration,
+            });
+          }
+          var tmp = objects[i];
+          animateCircle(tmp, random_duration);
+          setInterval(function(){ animateCircle(tmp, random_duration); }, random_duration);
+        }
+
+        var searchParams = new URLSearchParams(window.location.search)
+        var times = searchParams.get('p');
+        if (!times) alert('use query param: p=2 for define number of performers');
+        for(var i=0; i < times; i++){
+          makeCircle(i, objects);
+          startCircle(i)
+        }
       };
     </script>
 
@@ -97,8 +94,6 @@
   </head>
 
   <body>
-    <div class="progress" id="progress1"></div>
-    <div class="progress" id="progress2"></div>
   </body>
 
 </html>
