@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <style>
+      html, body {
+        padding: 0;
+        margin: 0;
+        background-color: black;
+      }
+
+      #start {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+      }
+
+      body {
+        animation-duration: 3000ms;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-direction: normal;
+      }
+
+      @keyframes fadein {
+        0%   { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      @keyframes fadeout {
+        0%   { opacity: 1; }
+        100% { opacity: 0; }
+      }
+    </style>
+
+    <!-- custom js -->
+    <script type='text/javascript' src='./master.js'></script>
+    <script type='text/javascript' src='./html.js'></script>
+  </head>
+
+  <body>
+    <div id="start"></div>
+  </body>
+</html>

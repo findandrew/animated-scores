@@ -1,0 +1,128 @@
+<!-- 
+
+SCORE NOTES
+
+-->
+
+
+<html>
+  <head>
+    <style>
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
+
+      .zone {
+        border: 3px solid white;
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        position: fixed;
+        margin: -62px 0 0 -62px;
+      }
+
+      #z1 {
+        top: 25%;
+        left: 50%;
+      }
+      #z2 {
+        top: 75%;
+        left: 20%;
+      }
+      #z3 {
+        top: 75%;
+        left: 80%;
+      }
+
+      .performer {
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        opacity: .7;
+        border-radius: 50%;
+        margin: -50px 0 0 -50px;
+      }
+
+      #p1 {
+        background-color: red;
+        top: 25%;
+        left: 50%;
+        /*animation: movement 120s ease-out 0s infinite;*/
+      }
+      #p2 {
+        background-color: green;
+        top: 75%;
+        left: 20%;
+        /*animation: movement 110s ease-out -8s infinite;*/
+      }
+      #p3 {
+        background-color: yellow;
+        top: 75%;
+        left: 80%;
+        /*animation: movement 100s ease-out -16s infinite;*/
+      }
+
+      @keyframes movement {
+        0% {
+          top: 20%;
+          left: 15%;
+        }
+        10%  {
+          top: 60%;
+          left: 25%;
+        }
+        20%  {
+          top: 10%;
+          left: 50%;
+        }
+        30%  {
+          top: 40%;
+          left: 80%;
+        }
+        40%  {
+          top: 10%;
+          left: 50%;
+        }
+        50%  {
+          top: 20%;
+          left: 15%;
+        }
+        60%  {
+          top: 70%;
+          left: 70%;
+        }
+        70%  {
+          top: 60%;
+          left: 25%;
+        }
+        80%  {
+          top: 70%;
+          left: 70%;
+        }
+        90%  {
+          top: 40%;
+          left: 80%;
+        }
+        100% {
+          top: 20%;
+          left: 15%;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="zone" id="z1"></div>
+    <div class="zone" id="z2"></div>
+    <div class="zone" id="z3"></div>
+
+
+    <div class="performer" id="p1"></div>
+    <div class="performer" id="p2"></div>
+    <div class="performer" id="p3"></div>
+  </body>
+</html>
