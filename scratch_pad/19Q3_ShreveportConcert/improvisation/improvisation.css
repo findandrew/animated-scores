@@ -8,7 +8,7 @@ body {
   left: 50%;
   margin: -200px 0 0 -141px;
   animation: pulse 4s ease infinite alternate;
-  animation-play-state: paused;
+  /*animation-play-state: intentionally not defined*/
 }
 
 @keyframes pulse {

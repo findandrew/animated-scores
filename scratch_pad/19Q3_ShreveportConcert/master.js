@@ -13,35 +13,35 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // improvisation
     window.setTimeout(buildImprovisation,     5000, body);
     window.setTimeout(fadeIn,                 5000, body, '5000ms');
-    window.setTimeout(startImprovisation,    15000, body);
+    window.setTimeout(runImprovisation,      15000, body);
     window.setTimeout(fadeOut,               25000, body, '5000ms');
     window.setTimeout(destroyImprovisation,  30000, body);
 
     // phases
     window.setTimeout(buildPhases,           30000, body);
     window.setTimeout(fadeIn,                30000, body, '5000ms');
-    window.setTimeout(startPhases,           40000, body);
+    window.setTimeout(runPhases,             40000, body);
     window.setTimeout(fadeOut,               50000, body, '5000ms');
     window.setTimeout(destroyPhases,         55000, body);
 
     // improvisation
     window.setTimeout(buildImprovisation,    55000, body);
     window.setTimeout(fadeIn,                55000, body, '5000ms');
-    window.setTimeout(startImprovisation,    65000, body);
+    window.setTimeout(runImprovisation,      65000, body);
     window.setTimeout(fadeOut,               75000, body, '5000ms');
     window.setTimeout(destroyImprovisation,  80000, body);
 
     // rows
     window.setTimeout(buildRows,             80000, body);
     window.setTimeout(fadeIn,                80000, body, '5000ms');
-    window.setTimeout(startRows,             90000, body);
+    window.setTimeout(runRows,               90000, body);
     window.setTimeout(fadeOut,              100000, body, '5000ms');
     window.setTimeout(destroyRows,          105000, body);
 
     // improvisation
     window.setTimeout(buildImprovisation,   105000, body);
     window.setTimeout(fadeIn,               105000, body, '5000ms');
-    window.setTimeout(startImprovisation,   115000, body);
+    window.setTimeout(runImprovisation,     115000, body);
     window.setTimeout(fadeOut,              125000, body, '5000ms');
     window.setTimeout(destroyImprovisation, 130000, body);
 
@@ -92,7 +92,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     loadCss("./improvisation/improvisation.css")
   }
 
-  function startImprovisation(el) {
+  function pauseImprovisation(el) {
+    var el = document.querySelectorAll(".ear");
+    el.forEach( function(el) {
+      el.style.animationPlayState = "running";
+    })
+  }
+
+  function runImprovisation(el) {
     var el = document.querySelectorAll(".ear");
     el.forEach( function(el) {
       el.style.animationPlayState = "running";
@@ -113,10 +120,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // phases
   function buildPhases(el) {
     el.innerHTML = phases_html;
+    pausePhases(el);
     loadCss("./phases/phases.css")
   }
 
-  function startPhases(el) {
+  function pausePhases(el) {
+    var el = document.querySelectorAll(".phase-one .bar");
+    el.forEach( function(el) {
+      el.style.animationPlayState = "paused";
+    })
+  }
+
+  function runPhases(el) {
     var el = document.querySelectorAll(".phase-one .bar");
     el.forEach( function(el) {
       el.style.animationPlayState = "running";
@@ -131,10 +146,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // rows
   function buildRows(el) {
     el.innerHTML = rows_html;
+    pauseRows(el);
     loadCss("./rows/rows.css")
   }
 
-  function startRows(el) {
+  function pauseRows(el) {
+    var el = document.querySelectorAll(".row");
+    el.forEach( function(el) {
+      el.style.animationPlayState = "paused";
+    })
+  }
+
+  function runRows(el) {
     var el = document.querySelectorAll(".row");
     el.forEach( function(el) {
       el.style.animationPlayState = "running";

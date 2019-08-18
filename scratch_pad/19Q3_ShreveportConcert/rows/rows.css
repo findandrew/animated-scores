@@ -21,7 +21,7 @@ html, body {
              x-position 300s linear -10s infinite,
              opacity    300s linear -10s infinite,
              color      300s linear -10s infinite;
-  animation-play-state: paused;
+  /*animation-play-state: intentionally not defined*/
 }
 #inst2 {
   top: 35%;
@@ -29,7 +29,7 @@ html, body {
              x-position 350s linear -100s infinite,
              opacity    350s linear -100s infinite,
              color      300s linear -100s infinite;
-  animation-play-state: paused;
+  /*animation-play-state: intentionally not defined*/
 }
 #inst3 {
   top: 68%;
@@ -37,7 +37,7 @@ html, body {
              x-position 350s linear -50s infinite,
              opacity    350s linear -50s infinite,
              color      300s linear -50s infinite;
-  animation-play-state: paused;
+  /*animation-play-state: intentionally not defined*/
 }
 
 @keyframes start {

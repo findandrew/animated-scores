@@ -33,7 +33,7 @@ html, body {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
   animation-direction: alternate;
-  animation-play-state: paused;
+  /*animation-play-state: intentionally not defined*/
 }
 @keyframes bar {
   0%   { height: 10%; }
