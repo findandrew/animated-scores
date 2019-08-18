@@ -7,64 +7,60 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var body = document.getElementsByTagName("body")[0];
 
     // clear screen
-    window.setTimeout(fadeOut,                   0, body);
-    window.setTimeout(clearHtml,                 0, body);
-
-    // phases
-    window.setTimeout(buildPhases,            5000, body);
-    window.setTimeout(fadeIn,                 5000, body);
-    window.setTimeout(startPhases,           10000, body);
-    window.setTimeout(fadeOut,               25000, body);
-    window.setTimeout(destroyPhases,         35000, body);
-
-    // rows
-    window.setTimeout(buildRows,             45000, body);
-    window.setTimeout(fadeIn,                45000, body);
-    window.setTimeout(startRows,             50000, body);
-    window.setTimeout(fadeOut,               60000, body);
-    window.setTimeout(destroyRows,           65000, body);
+    window.setTimeout(fadeOut,                   0, body, '5000ms');
+    window.setTimeout(clearHtml,              5000, body);
 
     // improvisation
-    window.setTimeout(buildImprovisation,    75000, body);
-    window.setTimeout(fadeIn,                75000, body);
-    window.setTimeout(startImprovisation,    90000, body);
-    window.setTimeout(fadeOut,              100000, body);
-    window.setTimeout(destroyImprovisation, 105000, body);
+    window.setTimeout(buildImprovisation,     5000, body);
+    window.setTimeout(fadeIn,                 5000, body, '5000ms');
+    window.setTimeout(startImprovisation,    15000, body);
+    window.setTimeout(fadeOut,               25000, body, '5000ms');
+    window.setTimeout(destroyImprovisation,  30000, body);
 
-    // // clear screen
-    // window.setTimeout(fadeOut,           20000, body);
-    // window.setTimeout(clearHtml,         20000, body);
+    // phases
+    window.setTimeout(buildPhases,           30000, body);
+    window.setTimeout(fadeIn,                30000, body, '5000ms');
+    window.setTimeout(startPhases,           40000, body);
+    window.setTimeout(fadeOut,               50000, body, '5000ms');
+    window.setTimeout(destroyPhases,         55000, body);
 
-    // window.setTimeout(fadeOut,               0, body);
-    // window.setTimeout(buildImprovisation, 3000, body);
-    // window.setTimeout(fadeIn,             3010, body);
+    // improvisation
+    window.setTimeout(buildImprovisation,    55000, body);
+    window.setTimeout(fadeIn,                55000, body, '5000ms');
+    window.setTimeout(startImprovisation,    65000, body);
+    window.setTimeout(fadeOut,               75000, body, '5000ms');
+    window.setTimeout(destroyImprovisation,  80000, body);
 
-    // window.setTimeout(fadeOut,            9000, body);
-    // window.setTimeout(buildTriangle,     12000, body);
-    // window.setTimeout(fadeIn,            12010, body);
+    // rows
+    window.setTimeout(buildRows,             80000, body);
+    window.setTimeout(fadeIn,                80000, body, '5000ms');
+    window.setTimeout(startRows,             90000, body);
+    window.setTimeout(fadeOut,              100000, body, '5000ms');
+    window.setTimeout(destroyRows,          105000, body);
 
-    // window.setTimeout(fadeOut,           15000, body);
-    // window.setTimeout(buildPhases,       18000, body);
-    // window.setTimeout(fadeIn,            18010, body);
+    // improvisation
+    window.setTimeout(buildImprovisation,   105000, body);
+    window.setTimeout(fadeIn,               105000, body, '5000ms');
+    window.setTimeout(startImprovisation,   115000, body);
+    window.setTimeout(fadeOut,              125000, body, '5000ms');
+    window.setTimeout(destroyImprovisation, 130000, body);
 
-    // window.setTimeout(fadeOut,           21000, body);
-    // window.setTimeout(buildRows,         24000, body);
-    // window.setTimeout(fadeIn,            24010, body);
-
-    // window.setTimeout(fadeOut,           28000, body);
+    // clear screen
+    window.setTimeout(fadeOut,              130000, body, '5000ms');
+    window.setTimeout(clearHtml,            130000, body);
   }
 
   // utilities
-  function fadeOut(el) {
-    // could pass animation duration as a variable
+  function fadeOut(el, duration) {
     el.style.animationPlayState = "paused";
+    el.style.animationDuration = duration;
     el.style.animationName = "fadeout";
     el.style.animationPlayState = "running";
   }
 
-  function fadeIn(el) {
-    // could pass animation duration as a variable
+  function fadeIn(el, duration) {
     el.style.animationPlayState = "paused";
+    el.style.animationDuration = duration;
     el.style.animationName = "fadein";
     el.style.animationPlayState = "running";
   }
