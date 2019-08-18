@@ -7,22 +7,29 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var body = document.getElementsByTagName("body")[0];
 
     // clear screen
-    window.setTimeout(fadeOut,               0, body);
-    window.setTimeout(clearHtml,             0, body);
+    window.setTimeout(fadeOut,                   0, body);
+    window.setTimeout(clearHtml,                 0, body);
 
     // phases
-    window.setTimeout(buildPhases,        5000, body);
-    window.setTimeout(fadeIn,             5000, body);
-    window.setTimeout(startPhases,       10000, body);
-    window.setTimeout(fadeOut,           25000, body);
-    window.setTimeout(destroyPhases,     35000, body);
+    window.setTimeout(buildPhases,            5000, body);
+    window.setTimeout(fadeIn,                 5000, body);
+    window.setTimeout(startPhases,           10000, body);
+    window.setTimeout(fadeOut,               25000, body);
+    window.setTimeout(destroyPhases,         35000, body);
 
     // rows
-    window.setTimeout(buildRows,         45000, body);
-    window.setTimeout(fadeIn,            45000, body);
-    window.setTimeout(startRows,         50000, body);
-    window.setTimeout(fadeOut,           60000, body);
-    window.setTimeout(destroyRows,       65000, body);
+    window.setTimeout(buildRows,             45000, body);
+    window.setTimeout(fadeIn,                45000, body);
+    window.setTimeout(startRows,             50000, body);
+    window.setTimeout(fadeOut,               60000, body);
+    window.setTimeout(destroyRows,           65000, body);
+
+    // improvisation
+    window.setTimeout(buildImprovisation,    75000, body);
+    window.setTimeout(fadeIn,                75000, body);
+    window.setTimeout(startImprovisation,    90000, body);
+    window.setTimeout(fadeOut,              100000, body);
+    window.setTimeout(destroyImprovisation, 105000, body);
 
     // // clear screen
     // window.setTimeout(fadeOut,           20000, body);
@@ -85,8 +92,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // improvisation
   function buildImprovisation(el) {
-    el.innerHTML = "";
     el.innerHTML = improvisation_html;
+    loadCss("./improvisation/improvisation.css")
+  }
+
+  function startImprovisation(el) {
+    var el = document.querySelectorAll(".ear");
+    el.forEach( function(el) {
+      el.style.animationPlayState = "running";
+    })
+  }
+
+  function destroyImprovisation(el) {
+    el.innerHTML = "";
+    removeCss("./improvisation/improvisation.css")
   }
 
   // triangle
