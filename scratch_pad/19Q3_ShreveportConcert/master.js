@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     el.innerHTML = improvisation_html;
   }
 
+  // triangle
   function buildTriangle(el) {
     el.innerHTML = "";
     el.innerHTML = triangle_html;

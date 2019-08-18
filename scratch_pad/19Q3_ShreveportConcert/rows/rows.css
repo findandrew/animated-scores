@@ -15,10 +15,6 @@ html, body {
 
 /* animation: [animation-name] [animation-duration] [animation-timing-function] [animation-delay] [animation-iteration-count] [animation-direction] [animation-fill-mode]; */
 
-/*html {
-  animation: start 30s linear,
-             end 30s linear 1080s forwards;
-}*/
 #inst1 {
   top: 2%;
   animation: width      300s linear -10s infinite,

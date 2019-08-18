@@ -1,0 +1,17 @@
+body {
+  background-color: black;
+}
+
+.ear {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -141px;
+  animation: pulse 4s ease infinite alternate;
+  animation-play-state: running;
+}
+
+@keyframes pulse {
+  0%   { opacity: 1; }
+  100% { opacity: 0.4; }
+}
