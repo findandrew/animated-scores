@@ -1,0 +1,51 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+
+.phase-one {
+  width: 100%;
+  height: 100%;
+}
+
+.performer {
+  width: 27%;
+  float: left;
+  padding: 0 3%;
+}
+
+.performer.a .bar {
+  background-color: red;
+}
+.performer.b .bar {
+  background-color: blue;
+}
+.performer.c .bar {
+  background-color: yellow;
+}
+
+.phase-one .bar {
+  width: 27%;
+  margin: 0 3%;
+  float: left;
+  animation-name: bar;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+  /*animation-play-state: intentionally not defined*/
+}
+@keyframes bar {
+  0%   { height: 10%; }
+  100% { height: 100%; }
+}
+
+.bar.a { animation-duration: 7000ms; }
+.bar.d { animation-duration: 6500ms; }
+.bar.g { animation-duration: 6000ms; }
+.bar.b { animation-duration: 5500ms; }
+.bar.e { animation-duration: 5000ms; }
+.bar.h { animation-duration: 4500ms; }
+.bar.c { animation-duration: 4000ms; }
+.bar.f { animation-duration: 3500ms; }
+.bar.i { animation-duration: 3000ms; }
