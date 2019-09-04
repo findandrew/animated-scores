@@ -6,7 +6,7 @@ html, body {
 
 .row {
   border-radius: 50px;
-  height: 29%; /* height and top work together to position along the y-axis */
+  height: 14%; /* height and top work together to position along the y-axis */
   width: 10%;
   position: fixed;
   right: 50%; /* right and margin-right work together to position along the x-axis */
@@ -16,27 +16,43 @@ html, body {
 /* animation: [animation-name] [animation-duration] [animation-timing-function] [animation-delay] [animation-iteration-count] [animation-direction] [animation-fill-mode]; */
 
 #inst1 {
-  top: 2%;
+  top: 3%;
   animation: width      300s linear -10s infinite,
-             x-position 300s linear -10s infinite,
-             opacity    300s linear -10s infinite,
-             color      300s linear -10s infinite;
+             x-position 300s linear -20s infinite,
+             opacity    300s linear -30s infinite,
+             color      300s linear -40s infinite;
   /*animation-play-state: intentionally not defined*/
 }
 #inst2 {
-  top: 35%;
-  animation: width      350s linear -100s infinite,
-             x-position 350s linear -100s infinite,
-             opacity    350s linear -100s infinite,
-             color      300s linear -100s infinite;
+  top: 23%;
+  animation: width      300s linear -100s infinite,
+             x-position 300s linear -110s infinite,
+             opacity    300s linear -120s infinite,
+             color      300s linear -130s infinite;
   /*animation-play-state: intentionally not defined*/
 }
 #inst3 {
-  top: 68%;
-  animation: width      350s linear -50s infinite,
-             x-position 350s linear -50s infinite,
-             opacity    350s linear -50s infinite,
-             color      300s linear -50s infinite;
+  top: 43%;
+  animation: width      300s linear -50s infinite,
+             x-position 300s linear -60s infinite,
+             opacity    300s linear -70s infinite,
+             color      300s linear -80s infinite;
+  /*animation-play-state: intentionally not defined*/
+}
+#inst4 {
+  top: 63%;
+  animation: width      300s linear -150s infinite,
+             x-position 300s linear -160s infinite,
+             opacity    300s linear -170s infinite,
+             color      300s linear -180s infinite;
+  /*animation-play-state: intentionally not defined*/
+}
+#inst5 {
+  top: 83%;
+  animation: width      300s linear -210s infinite,
+             x-position 300s linear -220s infinite,
+             opacity    300s linear -230s infinite,
+             color      300s linear -240s infinite;
   /*animation-play-state: intentionally not defined*/
 }
 
@@ -51,17 +67,23 @@ html, body {
   100% { opacity: 0; }
 }
 @keyframes color {
-  0%   { background-color: #fc6004; }
-  10%  { background-color: #fc6004; }
-  20%  { background-color: #fc6004; }
-  30%  { background-color: #fcdc04; }
-  40%  { background-color: #fcdc04; }
-  50%  { background-color: #fcdc04; }
-  60%  { background-color: #fcdc04; }
-  70%  { background-color: #0424fc; }
-  80%  { background-color: #0424fc; }
-  90%  { background-color: #0424fc; }
-  100% { background-color: #fc6004; }
+  0%   { background-color: red; }
+  10%  { background-color: red; }
+  20%  { background-color: red; }
+
+  21%  { background-color: blue; }
+  30%  { background-color: blue; }
+  40%  { background-color: blue; }
+  50%  { background-color: blue; }
+  60%  { background-color: blue; }
+
+  61%  { background-color: yellow; }
+  70%  { background-color: yellow; }
+  80%  { background-color: yellow; }
+  90%  { background-color: yellow; }
+
+  91%  { background-color: red; }
+  100% { background-color: red; }
 }
 @keyframes x-position {
   0%   { right: 50%; }
@@ -91,14 +113,34 @@ html, body {
 }
 @keyframes opacity {
   0%   { opacity: 1; }
-  10%  { opacity: .6; }
-  20%  { opacity: 0; }
-  30%  { opacity: .3; }
-  40%  { opacity: .6; }
-  50%  { opacity: 1; }
-  60%  { opacity: .8; }
-  70%  { opacity: 0; }
-  80%  { opacity: .2; }
-  90%  { opacity: .5; }
+  5%   { opacity: 1; }
+  
+  10%  { opacity: .3; }
+  15%  { opacity: .3; }
+  
+  20%  { opacity: 1; }
+  25%  { opacity: 1; }
+
+  30%  { opacity: 0; }
+  35%  { opacity: 0; }
+
+  40%  { opacity: .3; }
+  45%  { opacity: .3; }
+
+  50%  { opacity: 0; }
+  55%  { opacity: 0; }
+
+  60%  { opacity: .3; }
+  65%  { opacity: .3; }
+
+  70%  { opacity: 1; }
+  75%  { opacity: 1; }
+
+  80%  { opacity: .3; }
+  85%  { opacity: .3; }
+
+  90%  { opacity: 0; }
+  95%  { opacity: 0; }
+
   100% { opacity: 1; }
 }

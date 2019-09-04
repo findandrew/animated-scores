@@ -10,7 +10,7 @@ html, body {
 }
 
 .performer {
-  width: 27%;
+  width: 14%;
   float: left;
   padding: 0 3%;
 }
@@ -23,6 +23,12 @@ html, body {
 }
 .performer.c .bar {
   background-color: yellow;
+}
+.performer.d .bar {
+  background-color: green;
+}
+.performer.e .bar {
+  background-color: purple;
 }
 
 .phase-one .bar {
@@ -41,11 +47,43 @@ html, body {
 }
 
 .bar.a { animation-duration: 7000ms; }
-.bar.d { animation-duration: 6500ms; }
-.bar.g { animation-duration: 6000ms; }
-.bar.b { animation-duration: 5500ms; }
-.bar.e { animation-duration: 5000ms; }
-.bar.h { animation-duration: 4500ms; }
-.bar.c { animation-duration: 4000ms; }
-.bar.f { animation-duration: 3500ms; }
-.bar.i { animation-duration: 3000ms; }
+.bar.b { animation-duration: 5750ms; }
+.bar.c { animation-duration: 4500ms; }
+
+.bar.d { animation-duration: 6750ms; }
+.bar.e { animation-duration: 5500ms; }
+.bar.f { animation-duration: 4250ms; }
+
+.bar.g { animation-duration: 6500ms; }
+.bar.h { animation-duration: 5250ms; }
+.bar.i { animation-duration: 4000ms; }
+
+.bar.j { animation-duration: 6250ms; }
+.bar.k { animation-duration: 5000ms; }
+.bar.l { animation-duration: 3750ms; }
+
+.bar.m { animation-duration: 6000ms; }
+.bar.n { animation-duration: 4750ms; }
+.bar.o { animation-duration: 3500ms; }
+
+/*
+Column Durations
+
+3500
+3750
+4000
+4250
+4500
+
+4750
+5000
+5250
+5500
+5750
+
+6000
+6250
+6500
+6750
+7000
+*/
