@@ -7,47 +7,47 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var body = document.getElementsByTagName("body")[0];
 
     // clear screen
-    window.setTimeout(fadeOut,                   0, body, '5000ms');
-    window.setTimeout(clearHtml,              5000, body);
+    window.setTimeout(fadeOut,                    0, body, '5000ms');
+    window.setTimeout(clearHtml,               5000, body);
 
-    // improvisation
-    window.setTimeout(buildImprovisation,     5000, body);
-    window.setTimeout(fadeIn,                 5000, body, '5000ms');
-    window.setTimeout(runImprovisation,      15000, body);
-    window.setTimeout(fadeOut,               25000, body, '5000ms');
-    window.setTimeout(destroyImprovisation,  30000, body);
+    // improvisation, 3 min
+    window.setTimeout(buildImprovisation,      5000, body);
+    window.setTimeout(fadeIn,                  5000, body, '5000ms');
+    window.setTimeout(runImprovisation,       10000, body);
+    window.setTimeout(fadeOut,               190000, body, '5000ms');
+    window.setTimeout(destroyImprovisation,  195000, body);
 
-    // phases
-    window.setTimeout(buildPhases,           30000, body);
-    window.setTimeout(fadeIn,                30000, body, '5000ms');
-    window.setTimeout(runPhases,             40000, body);
-    window.setTimeout(fadeOut,               50000, body, '5000ms');
-    window.setTimeout(destroyPhases,         55000, body);
+    // phases, 8 min
+    window.setTimeout(buildPhases,           195000, body);
+    window.setTimeout(fadeIn,                195000, body, '5000ms');
+    window.setTimeout(runPhases,             200000, body);
+    window.setTimeout(fadeOut,               680000, body, '5000ms');
+    window.setTimeout(destroyPhases,         685000, body);
 
-    // improvisation
-    window.setTimeout(buildImprovisation,    55000, body);
-    window.setTimeout(fadeIn,                55000, body, '5000ms');
-    window.setTimeout(runImprovisation,      65000, body);
-    window.setTimeout(fadeOut,               75000, body, '5000ms');
-    window.setTimeout(destroyImprovisation,  80000, body);
+    // improvisation, 10 min
+    window.setTimeout(buildImprovisation,    685000, body);
+    window.setTimeout(fadeIn,                685000, body, '5000ms');
+    window.setTimeout(runImprovisation,      690000, body);
+    window.setTimeout(fadeOut,              1290000, body, '5000ms');
+    window.setTimeout(destroyImprovisation, 1295000, body);
 
-    // rows
-    window.setTimeout(buildRows,             80000, body);
-    window.setTimeout(fadeIn,                80000, body, '5000ms');
-    window.setTimeout(runRows,               90000, body);
-    window.setTimeout(fadeOut,              100000, body, '5000ms');
-    window.setTimeout(destroyRows,          105000, body);
+    // rows, 10 min
+    window.setTimeout(buildRows,            1295000, body);
+    window.setTimeout(fadeIn,               1295000, body, '5000ms');
+    window.setTimeout(runRows,              1300000, body);
+    window.setTimeout(fadeOut,              1900000, body, '5000ms');
+    window.setTimeout(destroyRows,          1905000, body);
 
-    // improvisation
-    window.setTimeout(buildImprovisation,   105000, body);
-    window.setTimeout(fadeIn,               105000, body, '5000ms');
-    window.setTimeout(runImprovisation,     115000, body);
-    window.setTimeout(fadeOut,              125000, body, '5000ms');
-    window.setTimeout(destroyImprovisation, 130000, body);
+    // improvisation, 4 min
+    window.setTimeout(buildImprovisation,   1905000, body);
+    window.setTimeout(fadeIn,               1905000, body, '5000ms');
+    window.setTimeout(runImprovisation,     1910000, body);
+    window.setTimeout(fadeOut,              2150000, body, '5000ms');
+    window.setTimeout(destroyImprovisation, 2155000, body);
 
     // clear screen
-    window.setTimeout(fadeOut,              130000, body, '5000ms');
-    window.setTimeout(clearHtml,            130000, body);
+    window.setTimeout(fadeOut,              2155000, body, '5000ms');
+    window.setTimeout(clearHtml,            2160000, body);
   }
 
   // utilities
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // improvisation
   function buildImprovisation(el) {
     el.innerHTML = improvisation_html;
-    loadCss("./improvisation/improvisation.css")
+    loadCss("./quintet/improvisation/improvisation.css")
   }
 
   function pauseImprovisation(el) {
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function destroyImprovisation(el) {
     el.innerHTML = "";
-    removeCss("./improvisation/improvisation.css")
+    removeCss("./quintet/improvisation/improvisation.css")
   }
 
   // triangle
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function buildPhases(el) {
     el.innerHTML = phases_html;
     pausePhases(el);
-    loadCss("./phases/phases.css")
+    loadCss("./quintet/phases/phases.css")
   }
 
   function pausePhases(el) {
@@ -140,14 +140,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function destroyPhases(el) {
     el.innerHTML = "";
-    removeCss("./phases/phases.css")
+    removeCss("./quintet/phases/phases.css")
   }
 
   // rows
   function buildRows(el) {
     el.innerHTML = rows_html;
     pauseRows(el);
-    loadCss("./rows/rows.css")
+    loadCss("./quintet/rows/rows.css")
   }
 
   function pauseRows(el) {
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function destroyRows(el) {
     el.innerHTML = "";
-    loadCss("./rows/rows.css")
+    removeCss("./quintet/rows/rows.css")
   }
 
 });
