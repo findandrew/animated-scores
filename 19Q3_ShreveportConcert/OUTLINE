@@ -1,0 +1,28 @@
+OUTLINE
+
+3-5 minutes
+  Improvisation
+
+8-10 minutes
+  Triangle piece
+
+3-5 minutes
+  Improvisation
+
+8-10 minutes
+  Rows piece
+
+3-5 minutes
+  Improvisation
+
+8-10 minutes
+  Columns pieceme
+
+FRAMEWORK
+
+Master JS wrapper
+- manage transitions from section to section
+- responsible for duration of each piece
+- responsible for destroying HTML of ending piece and inserting HTML of upcoming piece
+- responsible for starting and ending the entire set
+

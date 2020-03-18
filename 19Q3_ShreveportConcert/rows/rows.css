@@ -1,0 +1,108 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.row {
+  border-radius: 50px;
+  height: 29%; /* height and top work together to position along the y-axis */
+  width: 10%;
+  position: fixed;
+  right: 50%; /* right and margin-right work together to position along the x-axis */
+  margin-right: -5%;
+}
+
+/* animation: [animation-name] [animation-duration] [animation-timing-function] [animation-delay] [animation-iteration-count] [animation-direction] [animation-fill-mode]; */
+
+/*html {
+  animation: start 30s linear,
+             end 30s linear 1080s forwards;
+}*/
+#inst1 {
+  top: 2%;
+  animation: width      300s linear -10s infinite,
+             x-position 300s linear -10s infinite,
+             opacity    300s linear -10s infinite,
+             color      300s linear -10s infinite;
+  animation-play-state: paused;
+}
+#inst2 {
+  top: 35%;
+  animation: width      350s linear -100s infinite,
+             x-position 350s linear -100s infinite,
+             opacity    350s linear -100s infinite,
+             color      300s linear -100s infinite;
+  animation-play-state: paused;
+}
+#inst3 {
+  top: 68%;
+  animation: width      350s linear -50s infinite,
+             x-position 350s linear -50s infinite,
+             opacity    350s linear -50s infinite,
+             color      300s linear -50s infinite;
+  animation-play-state: paused;
+}
+
+@keyframes start {
+  /* fade the entire screen in together */
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes end {
+  /* fade the entire screen out together */
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes color {
+  0%   { background-color: #fc6004; }
+  10%  { background-color: #fc6004; }
+  20%  { background-color: #fc6004; }
+  30%  { background-color: #fcdc04; }
+  40%  { background-color: #fcdc04; }
+  50%  { background-color: #fcdc04; }
+  60%  { background-color: #fcdc04; }
+  70%  { background-color: #0424fc; }
+  80%  { background-color: #0424fc; }
+  90%  { background-color: #0424fc; }
+  100% { background-color: #fc6004; }
+}
+@keyframes x-position {
+  0%   { right: 50%; }
+  10%  { right: 5%; }
+  20%  { right: 20%; }
+  30%  { right: 70%; }
+  40%  { right: 0%; }
+  50%  { right: 10%; }
+  60%  { right: 90%; }
+  70%  { right: 50%; }
+  80%  { right: 10%; }
+  90%  { right: 80%; }
+  100% { right: 50%; }
+}
+@keyframes width  {
+  0%   { width: 50%; margin-right: -25%; }
+  10%  { width: 5%;  margin-right: -2%;  }
+  20%  { width: 20%; margin-right: -10%; }
+  30%  { width: 70%; margin-right: -35%; }
+  40%  { width: 5%;  margin-right: -2%;  }
+  50%  { width: 10%; margin-right: -5%;  }
+  60%  { width: 90%; margin-right: -45%; }
+  70%  { width: 50%; margin-right: -25%; }
+  80%  { width: 10%; margin-right: -5%;  }
+  90%  { width: 80%; margin-right: -40%; }
+  100% { width: 50%; margin-right: -25%; }
+}
+@keyframes opacity {
+  0%   { opacity: 1; }
+  10%  { opacity: .6; }
+  20%  { opacity: 0; }
+  30%  { opacity: .3; }
+  40%  { opacity: .6; }
+  50%  { opacity: 1; }
+  60%  { opacity: .8; }
+  70%  { opacity: 0; }
+  80%  { opacity: .2; }
+  90%  { opacity: .5; }
+  100% { opacity: 1; }
+}
