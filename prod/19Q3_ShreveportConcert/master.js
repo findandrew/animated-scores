@@ -83,18 +83,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 
-  // improvisation
-  function buildImprovisation(el) {
-    el.innerHTML = "";
-    el.innerHTML = improvisation_html;
-  }
-
-  function buildTriangle(el) {
-    el.innerHTML = "";
-    el.innerHTML = triangle_html;
-  }
-
-  // phases
   function buildPiece(el, html_var, css_file) {
     el.innerHTML = html_var;
     loadCss(css_file)
@@ -110,24 +98,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function destroyPiece(el, css_file) {
     el.innerHTML = "";
     removeCss(css_file)
-  }
-
-  // rows
-  function buildRows(el, css_file) {
-    el.innerHTML = rows_html;
-    loadCss(css_file)
-  }
-
-  function startRows(el, anim_elems) {
-    var el = document.querySelectorAll(anim_elems);
-    el.forEach( function(el) {
-      el.style.animationPlayState = "running";
-    })
-  }
-
-  function destroyRows(el, css_file) {
-    el.innerHTML = "";
-    loadCss(css_file)
   }
 
 });
