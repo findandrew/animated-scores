@@ -1,28 +1,32 @@
+// master
+
 document.addEventListener("DOMContentLoaded", function(event) {
 
   document.getElementById("start").onclick = manageSet;
 
   function manageSet() {
 
+    createTimeoutDelays(timeout_delays, piece_durations);
+
     var body = document.getElementsByTagName("body")[0];
 
     // clear screen
-    window.setTimeout(fadeOut,               0, body);
-    window.setTimeout(clearHtml,             0, body);
+    window.setTimeout(fadeOut,      timeout_delays[0], body);
+    window.setTimeout(clearHtml,    timeout_delays[1], body);
 
     // phases
-    window.setTimeout(buildPiece,         5000, body, phases_html, "./phases/phases.css");
-    window.setTimeout(fadeIn,             5000, body);
-    window.setTimeout(startPiece,        10000, body, ".phase-one .bar");
-    window.setTimeout(fadeOut,           25000, body);
-    window.setTimeout(destroyPiece,      35000, body, "./phases/phases.css");
+    window.setTimeout(buildPiece,   timeout_delays[2], body, phases_html, "./phases/phases.css");
+    window.setTimeout(fadeIn,       timeout_delays[2], body);
+    window.setTimeout(startPiece,   timeout_delays[3], body, ".phase-one .bar");
+    window.setTimeout(fadeOut,      timeout_delays[4], body); //duration
+    window.setTimeout(destroyPiece, timeout_delays[5], body, "./phases/phases.css");
 
     // rows
-    window.setTimeout(buildPiece,        45000, body, rows_html, "./rows/rows.css");
-    window.setTimeout(fadeIn,            45000, body);
-    window.setTimeout(startPiece,        50000, body, ".row");
-    window.setTimeout(fadeOut,           60000, body);
-    window.setTimeout(destroyPiece,      65000, body, "./rows/rows.css");
+    window.setTimeout(buildPiece,   timeout_delays[6], body, rows_html, "./rows/rows.css");
+    window.setTimeout(fadeIn,       timeout_delays[6], body);
+    window.setTimeout(startPiece,   timeout_delays[7], body, ".row");
+    window.setTimeout(fadeOut,      timeout_delays[8], body); //duration
+    window.setTimeout(destroyPiece, timeout_delays[9], body, "./rows/rows.css");
 
     // // clear screen
     // window.setTimeout(fadeOut,           20000, body);
@@ -45,59 +49,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // window.setTimeout(fadeIn,            24010, body);
 
     // window.setTimeout(fadeOut,           28000, body);
-  }
-
-  // utilities
-  function fadeOut(el) {
-    // could pass animation duration as a variable
-    el.style.animationPlayState = "paused";
-    el.style.animationName = "fadeout";
-    el.style.animationPlayState = "running";
-  }
-
-  function fadeIn(el) {
-    // could pass animation duration as a variable
-    el.style.animationPlayState = "paused";
-    el.style.animationName = "fadein";
-    el.style.animationPlayState = "running";
-  }
-
-  function clearHtml(el) {
-    el.innerHTML = "";
-  }
-
-  function loadCss(filename){
-    var fileref=document.createElement("link")
-    fileref.setAttribute("rel", "stylesheet")
-    fileref.setAttribute("type", "text/css")
-    fileref.setAttribute("href", filename)
-    document.getElementsByTagName("head")[0].appendChild(fileref)
-  }
-
-  function removeCss(filename){
-    var el=document.getElementsByTagName("link")
-
-    for (var i=el.length; i>=0; i--){ //search backwards within nodelist for matching elements to remove
-      if (el[i] && el[i].getAttribute("href")!=null && el[i].getAttribute("href").indexOf(filename)!=-1)
-          el[i].parentNode.removeChild(el[i]) //remove element
-    }
-  }
-
-  function buildPiece(el, html_var, css_file) {
-    el.innerHTML = html_var;
-    loadCss(css_file)
-  }
-
-  function startPiece(el, anim_elems) {
-    var el = document.querySelectorAll(anim_elems);
-    el.forEach( function(el) {
-      el.style.animationPlayState = "running";
-    })
-  }
-
-  function destroyPiece(el, css_file) {
-    el.innerHTML = "";
-    removeCss(css_file)
   }
 
 });
