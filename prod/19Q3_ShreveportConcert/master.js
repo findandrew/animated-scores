@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // phases
     window.setTimeout(buildPhases,        5000, body);
     window.setTimeout(fadeIn,             5000, body);
-    window.setTimeout(startPhases,       10000, body);
+    window.setTimeout(startPhases,       10000, body, ".phase-one .bar");
     window.setTimeout(fadeOut,           25000, body);
     window.setTimeout(destroyPhases,     35000, body);
 
     // rows
     window.setTimeout(buildRows,         45000, body);
     window.setTimeout(fadeIn,            45000, body);
-    window.setTimeout(startRows,         50000, body);
+    window.setTimeout(startRows,         50000, body, ".row");
     window.setTimeout(fadeOut,           60000, body);
     window.setTimeout(destroyRows,       65000, body);
 
@@ -100,8 +100,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     loadCss("./phases/phases.css")
   }
 
-  function startPhases(el) {
-    var el = document.querySelectorAll(".phase-one .bar");
+  function startPhases(el, anim_elems) {
+    var el = document.querySelectorAll(anim_elems);
     el.forEach( function(el) {
       el.style.animationPlayState = "running";
     })
@@ -118,8 +118,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     loadCss("./rows/rows.css")
   }
 
-  function startRows(el) {
-    var el = document.querySelectorAll(".row");
+  function startRows(el, anim_elems) {
+    var el = document.querySelectorAll(anim_elems);
     el.forEach( function(el) {
       el.style.animationPlayState = "running";
     })
