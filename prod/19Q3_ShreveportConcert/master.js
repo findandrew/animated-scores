@@ -11,14 +11,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     window.setTimeout(clearHtml,             0, body);
 
     // phases
-    window.setTimeout(buildPhases,        5000, body);
+    window.setTimeout(buildPhases,        5000, body, "./phases/phases.css");
     window.setTimeout(fadeIn,             5000, body);
     window.setTimeout(startPhases,       10000, body, ".phase-one .bar");
     window.setTimeout(fadeOut,           25000, body);
     window.setTimeout(destroyPhases,     35000, body);
 
     // rows
-    window.setTimeout(buildRows,         45000, body);
+    window.setTimeout(buildRows,         45000, body, "./rows/rows.css");
     window.setTimeout(fadeIn,            45000, body);
     window.setTimeout(startRows,         50000, body, ".row");
     window.setTimeout(fadeOut,           60000, body);
@@ -95,9 +95,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   // phases
-  function buildPhases(el) {
+  function buildPhases(el, css_file) {
     el.innerHTML = phases_html;
-    loadCss("./phases/phases.css")
+    loadCss(css_file)
   }
 
   function startPhases(el, anim_elems) {
@@ -113,9 +113,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   // rows
-  function buildRows(el) {
+  function buildRows(el, css_file) {
     el.innerHTML = rows_html;
-    loadCss("./rows/rows.css")
+    loadCss(css_file)
   }
 
   function startRows(el, anim_elems) {
