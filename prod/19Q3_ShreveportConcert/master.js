@@ -11,18 +11,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
     window.setTimeout(clearHtml,             0, body);
 
     // phases
-    window.setTimeout(buildPhases,        5000, body);
+    window.setTimeout(buildPiece,         5000, body, phases_html, "./phases/phases.css");
     window.setTimeout(fadeIn,             5000, body);
-    window.setTimeout(startPhases,       10000, body);
+    window.setTimeout(startPiece,        10000, body, ".phase-one .bar");
     window.setTimeout(fadeOut,           25000, body);
-    window.setTimeout(destroyPhases,     35000, body);
+    window.setTimeout(destroyPiece,      35000, body, "./phases/phases.css");
 
     // rows
-    window.setTimeout(buildRows,         45000, body);
+    window.setTimeout(buildPiece,        45000, body, rows_html, "./rows/rows.css");
     window.setTimeout(fadeIn,            45000, body);
-    window.setTimeout(startRows,         50000, body);
+    window.setTimeout(startPiece,        50000, body, ".row");
     window.setTimeout(fadeOut,           60000, body);
-    window.setTimeout(destroyRows,       65000, body);
+    window.setTimeout(destroyPiece,      65000, body, "./rows/rows.css");
 
     // // clear screen
     // window.setTimeout(fadeOut,           20000, body);
@@ -83,51 +83,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 
-  // improvisation
-  function buildImprovisation(el) {
-    el.innerHTML = "";
-    el.innerHTML = improvisation_html;
+  function buildPiece(el, html_var, css_file) {
+    el.innerHTML = html_var;
+    loadCss(css_file)
   }
 
-  function buildTriangle(el) {
-    el.innerHTML = "";
-    el.innerHTML = triangle_html;
-  }
-
-  // phases
-  function buildPhases(el) {
-    el.innerHTML = phases_html;
-    loadCss("./phases/phases.css")
-  }
-
-  function startPhases(el) {
-    var el = document.querySelectorAll(".phase-one .bar");
+  function startPiece(el, anim_elems) {
+    var el = document.querySelectorAll(anim_elems);
     el.forEach( function(el) {
       el.style.animationPlayState = "running";
     })
   }
 
-  function destroyPhases(el) {
+  function destroyPiece(el, css_file) {
     el.innerHTML = "";
-    removeCss("./phases/phases.css")
-  }
-
-  // rows
-  function buildRows(el) {
-    el.innerHTML = rows_html;
-    loadCss("./rows/rows.css")
-  }
-
-  function startRows(el) {
-    var el = document.querySelectorAll(".row");
-    el.forEach( function(el) {
-      el.style.animationPlayState = "running";
-    })
-  }
-
-  function destroyRows(el) {
-    el.innerHTML = "";
-    loadCss("./rows/rows.css")
+    removeCss(css_file)
   }
 
 });
