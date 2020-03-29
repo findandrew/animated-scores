@@ -8,21 +8,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // clear screen
     window.setTimeout(fadeOut,               0, body);
-    window.setTimeout(clearHtml,             0, body);
+    window.setTimeout(clearHtml,          3000, body);
 
     // phases
     window.setTimeout(buildPiece,         5000, body, phases_html, "./phases/phases.css");
     window.setTimeout(fadeIn,             5000, body);
     window.setTimeout(startPiece,        10000, body, ".phase-one .bar");
-    window.setTimeout(fadeOut,           25000, body);
-    window.setTimeout(destroyPiece,      35000, body, "./phases/phases.css");
+    window.setTimeout(fadeOut,           15000, body); //duration
+    window.setTimeout(destroyPiece,      18000, body, "./phases/phases.css");
 
     // rows
-    window.setTimeout(buildPiece,        45000, body, rows_html, "./rows/rows.css");
-    window.setTimeout(fadeIn,            45000, body);
-    window.setTimeout(startPiece,        50000, body, ".row");
-    window.setTimeout(fadeOut,           60000, body);
-    window.setTimeout(destroyPiece,      65000, body, "./rows/rows.css");
+    window.setTimeout(buildPiece,        20000, body, rows_html, "./rows/rows.css");
+    window.setTimeout(fadeIn,            20000, body);
+    window.setTimeout(startPiece,        25000, body, ".row");
+    window.setTimeout(fadeOut,           30000, body); //duration
+    window.setTimeout(destroyPiece,      33000, body, "./rows/rows.css");
 
     // // clear screen
     // window.setTimeout(fadeOut,           20000, body);
