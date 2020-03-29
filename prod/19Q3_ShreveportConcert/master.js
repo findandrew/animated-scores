@@ -11,18 +11,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
     window.setTimeout(clearHtml,             0, body);
 
     // phases
-    window.setTimeout(buildPhases,        5000, body, "./phases/phases.css");
+    window.setTimeout(buildPiece,         5000, body, phases_html, "./phases/phases.css");
     window.setTimeout(fadeIn,             5000, body);
-    window.setTimeout(startPhases,       10000, body, ".phase-one .bar");
+    window.setTimeout(startPiece,        10000, body, ".phase-one .bar");
     window.setTimeout(fadeOut,           25000, body);
-    window.setTimeout(destroyPhases,     35000, body, "./phases/phases.css");
+    window.setTimeout(destroyPiece,      35000, body, "./phases/phases.css");
 
     // rows
-    window.setTimeout(buildRows,         45000, body, "./rows/rows.css");
+    window.setTimeout(buildPiece,        45000, body, rows_html, "./rows/rows.css");
     window.setTimeout(fadeIn,            45000, body);
-    window.setTimeout(startRows,         50000, body, ".row");
+    window.setTimeout(startPiece,        50000, body, ".row");
     window.setTimeout(fadeOut,           60000, body);
-    window.setTimeout(destroyRows,       65000, body, "./rows/rows.css");
+    window.setTimeout(destroyPiece,      65000, body, "./rows/rows.css");
 
     // // clear screen
     // window.setTimeout(fadeOut,           20000, body);
@@ -95,19 +95,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   // phases
-  function buildPhases(el, css_file) {
-    el.innerHTML = phases_html;
+  function buildPiece(el, html_var, css_file) {
+    el.innerHTML = html_var;
     loadCss(css_file)
   }
 
-  function startPhases(el, anim_elems) {
+  function startPiece(el, anim_elems) {
     var el = document.querySelectorAll(anim_elems);
     el.forEach( function(el) {
       el.style.animationPlayState = "running";
     })
   }
 
-  function destroyPhases(el, css_file) {
+  function destroyPiece(el, css_file) {
     el.innerHTML = "";
     removeCss(css_file)
   }
