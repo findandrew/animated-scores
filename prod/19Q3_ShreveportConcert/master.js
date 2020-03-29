@@ -4,25 +4,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function manageSet() {
 
+    createTimeoutDelays(timeout_delays, piece_durations);
+
     var body = document.getElementsByTagName("body")[0];
 
     // clear screen
-    window.setTimeout(fadeOut,               0, body);
-    window.setTimeout(clearHtml,          3000, body);
+    window.setTimeout(fadeOut,      timeout_delays[0], body);
+    window.setTimeout(clearHtml,    timeout_delays[1], body);
 
     // phases
-    window.setTimeout(buildPiece,         5000, body, phases_html, "./phases/phases.css");
-    window.setTimeout(fadeIn,             5000, body);
-    window.setTimeout(startPiece,        10000, body, ".phase-one .bar");
-    window.setTimeout(fadeOut,           15000, body); //duration
-    window.setTimeout(destroyPiece,      18000, body, "./phases/phases.css");
+    window.setTimeout(buildPiece,   timeout_delays[2], body, phases_html, "./phases/phases.css");
+    window.setTimeout(fadeIn,       timeout_delays[2], body);
+    window.setTimeout(startPiece,   timeout_delays[3], body, ".phase-one .bar");
+    window.setTimeout(fadeOut,      timeout_delays[4], body); //duration
+    window.setTimeout(destroyPiece, timeout_delays[5], body, "./phases/phases.css");
 
     // rows
-    window.setTimeout(buildPiece,        20000, body, rows_html, "./rows/rows.css");
-    window.setTimeout(fadeIn,            20000, body);
-    window.setTimeout(startPiece,        25000, body, ".row");
-    window.setTimeout(fadeOut,           30000, body); //duration
-    window.setTimeout(destroyPiece,      33000, body, "./rows/rows.css");
+    window.setTimeout(buildPiece,   timeout_delays[6], body, rows_html, "./rows/rows.css");
+    window.setTimeout(fadeIn,       timeout_delays[6], body);
+    window.setTimeout(startPiece,   timeout_delays[7], body, ".row");
+    window.setTimeout(fadeOut,      timeout_delays[8], body); //duration
+    window.setTimeout(destroyPiece, timeout_delays[9], body, "./rows/rows.css");
 
     // // clear screen
     // window.setTimeout(fadeOut,           20000, body);
