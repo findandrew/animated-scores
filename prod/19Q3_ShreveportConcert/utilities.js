@@ -3,10 +3,11 @@
 function createTimeoutDelays(delays, durations) {
   durations.forEach( function(el) {
     var miliseconds = el * 1000; // durations are configured as seconds
-    delays.push(delays[delays.length - 1] + rest_duration);
-    delays.push(delays[delays.length - 1] + fade_duration + rest_duration);
-    delays.push(delays[delays.length - 1] + miliseconds);
-    delays.push(delays[delays.length - 1] + fade_duration);
+    delays.push(delays[delays.length - 1] + rest_duration);                 // build
+    delays.push(delays[delays.length - 1]);                                 // fade in
+    delays.push(delays[delays.length - 1] + fade_duration + rest_duration); // start
+    delays.push(delays[delays.length - 1] + miliseconds);                   // fade out
+    delays.push(delays[delays.length - 1] + fade_duration);                 // destroy
   })
 }
 
