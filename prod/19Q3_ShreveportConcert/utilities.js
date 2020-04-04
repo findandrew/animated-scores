@@ -1,12 +1,26 @@
 // utilities
 
+function createSetTimeouts(args) {
+  args.forEach( function(row) {
+    window.setTimeout(eval(row[0]), row[1], row[2], row[3], row[4] )
+  })
+}
+
+function createTimeoutArgs(delays, args) {
+  args.forEach( function(a, i) {
+    timeout_args[i].splice(1, 0, delays[i])
+    timeout_args[i].splice(2, 0, document.body)
+  })
+}
+
 function createTimeoutDelays(delays, durations) {
   durations.forEach( function(el) {
     var miliseconds = el * 1000; // durations are configured as seconds
-    delays.push(delays[delays.length - 1] + rest_duration);
-    delays.push(delays[delays.length - 1] + fade_duration + rest_duration);
-    delays.push(delays[delays.length - 1] + miliseconds);
-    delays.push(delays[delays.length - 1] + fade_duration);
+    delays.push(delays[delays.length - 1] + rest_duration);                 // build
+    delays.push(delays[delays.length - 1]);                                 // fade in
+    delays.push(delays[delays.length - 1] + fade_duration + rest_duration); // start
+    delays.push(delays[delays.length - 1] + miliseconds);                   // fade out
+    delays.push(delays[delays.length - 1] + fade_duration);                 // destroy
   })
 }
 
