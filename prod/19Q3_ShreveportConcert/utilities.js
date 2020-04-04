@@ -1,5 +1,11 @@
 // utilities
 
+function createSetTimeouts(args) {
+  args.forEach( function(row) {
+    window.setTimeout(eval(row[0]), row[1], row[2], row[3], row[4] )
+  })
+}
+
 function createTimeoutArgs(delays, args) {
   args.forEach( function(a, i) {
     timeout_args[i].splice(1, 0, delays[i])
