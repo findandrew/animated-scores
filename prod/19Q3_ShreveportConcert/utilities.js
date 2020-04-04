@@ -1,5 +1,12 @@
 // utilities
 
+function createTimeoutArgs(delays, args) {
+  args.forEach( function(a, i) {
+    timeout_args[i].splice(1, 0, delays[i])
+    timeout_args[i].splice(2, 0, document.body)
+  })
+}
+
 function createTimeoutDelays(delays, durations) {
   durations.forEach( function(el) {
     var miliseconds = el * 1000; // durations are configured as seconds

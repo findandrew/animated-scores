@@ -7,26 +7,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function manageSet() {
 
     createTimeoutDelays(timeout_delays, piece_durations);
+    createTimeoutArgs(timeout_delays, timeout_args);
+     // window.setTimeout(eval(row[0]), row[1], document.body)
 
-    var body = document.getElementsByTagName("body")[0];
+    // // clear screen
+    // window.setTimeout(fadeOut,      timeout_delays[0], body);
+    // window.setTimeout(clearHtml,    timeout_delays[1], body);
 
-    // clear screen
-    window.setTimeout(fadeOut,      timeout_delays[0], body);
-    window.setTimeout(clearHtml,    timeout_delays[1], body);
+    // // phases
+    // window.setTimeout(buildPiece,   timeout_delays[2], body, phases_html, "./phases/phases.css");
+    // window.setTimeout(fadeIn,       timeout_delays[3], body);
+    // window.setTimeout(startPiece,   timeout_delays[4], body, ".phase-one .bar");
+    // window.setTimeout(fadeOut,      timeout_delays[5], body); //duration
+    // window.setTimeout(destroyPiece, timeout_delays[6], body, "./phases/phases.css");
 
-    // phases
-    window.setTimeout(buildPiece,   timeout_delays[2], body, phases_html, "./phases/phases.css");
-    window.setTimeout(fadeIn,       timeout_delays[3], body);
-    window.setTimeout(startPiece,   timeout_delays[4], body, ".phase-one .bar");
-    window.setTimeout(fadeOut,      timeout_delays[5], body); //duration
-    window.setTimeout(destroyPiece, timeout_delays[6], body, "./phases/phases.css");
-
-    // rows
-    window.setTimeout(buildPiece,   timeout_delays[7], body, rows_html, "./rows/rows.css");
-    window.setTimeout(fadeIn,       timeout_delays[8], body);
-    window.setTimeout(startPiece,   timeout_delays[9], body, ".row");
-    window.setTimeout(fadeOut,      timeout_delays[10], body); //duration
-    window.setTimeout(destroyPiece, timeout_delays[11], body, "./rows/rows.css");
+    // // rows
+    // window.setTimeout(buildPiece,   timeout_delays[7], body, rows_html, "./rows/rows.css");
+    // window.setTimeout(fadeIn,       timeout_delays[8], body);
+    // window.setTimeout(startPiece,   timeout_delays[9], body, ".row");
+    // window.setTimeout(fadeOut,      timeout_delays[10], body); //duration
+    // window.setTimeout(destroyPiece, timeout_delays[11], body, "./rows/rows.css");
 
     // // clear screen
     // window.setTimeout(fadeOut,           20000, body);
