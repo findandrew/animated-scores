@@ -1,9 +1,20 @@
-// future enhancement:
-// use setup a server (probably express) to fetch() local html
-// files from. this will allow me to edit only the primary
-// html file, without having to save as a string here
+// html_strings
 //
-// https://stackoverflow.com/questions/50007055/fetch-request-to-local-file-not-working
+// To quickly create a minified string of HTML from the source
+// file, run the bash command below in terminal. It will output
+// a minified string after removing unnedded HTML tags from the
+// code.
+//
+// sed 's/^[ \t]*//; s/[ \t]*$//; /^$/d; 1,5d' path_to_html_file | sed '$d' | sed '$d' | tr -d '\n'
+//
+// Explantion of the bash command:
+//
+// sed 's/^[ \t]*//'  # deletes leading white space on each line
+// sed 's/[ \t]*$//'  # deletes trailing white space on each line
+// sed '/^$/d'        # deletes all empty lines
+// sed '1,5d'         # deletes the first 5 lines, which contain unneeded HTML tags
+// sed '$d'           # deletes the last line, which containes unneeded HTML tags
+// tr -d '\n'         # deletes all line breaks, minifying the HTML
 
 var improvisation_html = "improvisation";
 var triangle_html      = "triangle";
