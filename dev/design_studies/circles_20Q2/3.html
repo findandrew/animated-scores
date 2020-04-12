@@ -1,0 +1,55 @@
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .circle {
+      height: 300px;
+      width: 300px;
+      border-radius: 300px;
+      animation: circleAround linear infinite;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      opacity: 0.6;
+    }
+    .a {
+      margin: -100px 0 0 -150px;
+      background-color: rgb(156, 144, 196);
+      animation-delay: 0s;
+      animation-duration: 20s;
+    }
+    .b {
+      margin: -150px 0 0 -100px;
+      background-color: rgb(0, 153, 123);
+      animation-delay: -15s;
+      animation-duration: 20s;
+    }
+    .c {
+      margin: -200px 0 0 -150px;
+      background-color: rgb(233, 210, 92);
+      animation-delay: -5s;
+      animation-duration: 20s;
+    }
+    .d {
+      margin: -150px 0 0 -200px;
+      background-color: rgb(252, 118, 106);
+      animation-delay: -10s;
+      animation-duration: 20s;
+    }
+
+    @keyframes circleAround {
+      from { transform: rotate(0deg)   translateX(40px) rotate(0deg); }
+      to   { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle a"></div>
+  <div class="circle b"></div>
+  <div class="circle c"></div>
+  <div class="circle d"></div>
+</body>
+</html>

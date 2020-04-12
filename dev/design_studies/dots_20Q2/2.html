@@ -1,0 +1,169 @@
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: rgb(244, 131, 133);
+    }
+    .square {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin: -200px 0 0 -200px;
+      height: 400px;
+      width: 400px;
+    }
+    .square.back {
+      z-index: -9999;
+      opacity: 0.7;
+      animation-direction: reverse;
+    }
+    .square.front {
+      z-index: 9999;
+      opacity: 0.5;
+      animation-direction: normal;
+    }
+    .quadrant {
+      height: 50%;
+      width: 50%;
+      float: left;
+    }
+    .dot {
+      float: left;
+      height: 29%;
+      width: 29%;
+      margin: 2%;
+      border-radius: 100%;
+    }
+    .back .a .dot {
+      background-color: rgb(108, 58, 98);
+    }
+    .back .b .dot {
+      background-color: rgb(91, 137, 203);
+    }
+    .back .c .dot {
+      background-color: rgb(76, 167, 109);
+    }
+    .back .d .dot {
+      background-color: rgb(255, 196, 40);
+    }
+
+    .front .a .dot {
+      background-color: rgb(94, 204, 185);
+    }
+    .front .b .dot {
+      background-color: rgb(216, 105, 151);
+    }
+    .front .c .dot {
+      background-color: rgb(253, 255, 59);
+    }
+    .front .d .dot {
+      background-color: rgb(94, 204, 185);
+    }
+
+    .rotate {
+      animation: rotate 220s linear infinite;
+    }
+    @keyframes rotate {
+      100% { transform:rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="square back rotate">
+    <div class="quadrant a">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant b">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant c">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant d">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  <div class="square front rotate">
+    <div class="quadrant a">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant b">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant c">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant d">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+</body>
+</html>
