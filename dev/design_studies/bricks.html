@@ -1,0 +1,113 @@
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .square {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin: -200px 0 0 -200px;
+      height: 400px;
+      width: 400px;
+    }
+    .square.back {
+      z-index: -9999;
+    }
+    .square.front {
+      z-index: 9999;
+    }
+    .half {
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      top: 0;
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      left: 200px;
+    }
+    .rect {
+      height: 12.5%;
+      width: 100%;
+    }
+    .back .rect {
+      opacity: 0.8;
+    }
+    .front .rect {
+      opacity: 0.5;
+    }
+    .a {
+      background-color: rgb(219, 85, 91);
+    }
+    .b {
+      background-color: rgb(232, 172, 50);
+    }
+    .rotate .a {
+      //background-color: rgb(150, 78, 115);
+      background-color: rgb(253, 255, 59); // safety yellow
+    }
+    .rotate .b {
+      //background-color: rgb(69, 109, 130);
+      background-color: rgb(54, 186, 198);
+    }
+
+    .rotate {
+      animation: rotate 120s linear infinite;
+    }
+    @keyframes rotate {
+      100% { transform:rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="square back">
+    <div class="half left">
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+    </div>
+    <div class="half right">
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+    </div>
+  </div>
+  <div class="square front rotate">
+    <div class="half left">
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+    </div>
+    <div class="half right">
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+    </div>
+  </div>
+</body>
+</html>
