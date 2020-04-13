@@ -1,0 +1,115 @@
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .square {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin: -200px 0 0 -200px;
+      height: 400px;
+      width: 400px;
+    }
+    .square.back {
+      z-index: -9999;
+    }
+    .square.front {
+      z-index: 9999;
+    }
+    .half {
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      top: 0;
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      left: 200px;
+    }
+    .rect {
+      height: 12.5%;
+      width: 100%;
+    }
+    .back .rect {
+      opacity: 0.8;
+    }
+    .front .rect {
+      opacity: 0.5;
+    }
+    .a {
+      background-color: rgb(219, 85, 91);
+    }
+    .b {
+      background-color: rgb(232, 172, 50);
+    }
+    .front .a {
+      background-color: rgb(253, 255, 59);
+      animation-delay: -5s;
+    }
+    .front .b {
+      background-color: rgb(54, 186, 198);
+      animation-delay: -15s;
+    }
+
+    .fade {
+      animation: fade 20s ease infinite;
+      animation-direction: alternate;
+    }
+    @keyframes fade {
+      from { opacity: 0.2; }
+      to   { opacity: 0.8; }
+    }
+  </style>
+</head>
+<body>
+  <div class="square back">
+    <div class="half left">
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+    </div>
+    <div class="half right">
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+      <div class="rect b"></div>
+      <div class="rect a"></div>
+    </div>
+  </div>
+  <div class="square front">
+    <div class="half left">
+      <div class="rect a fade"></div>
+      <div class="rect b fade"></div>
+      <div class="rect a fade"></div>
+      <div class="rect b fade"></div>
+      <div class="rect a fade"></div>
+      <div class="rect b fade"></div>
+      <div class="rect a fade"></div>
+      <div class="rect b fade"></div>
+    </div>
+    <div class="half right">
+      <div class="rect b fade"></div>
+      <div class="rect a fade"></div>
+      <div class="rect b fade"></div>
+      <div class="rect a fade"></div>
+      <div class="rect b fade"></div>
+      <div class="rect a fade"></div>
+      <div class="rect b fade"></div>
+      <div class="rect a fade"></div>
+    </div>
+  </div>
+</body>
+</html>

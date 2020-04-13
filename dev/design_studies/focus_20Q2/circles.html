@@ -1,0 +1,119 @@
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: rgb(244, 152, 160);
+    }
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -50px 0 0 -50px;
+    }
+    .circle {
+      height: 100px;
+      width: 100px;
+      border-radius: 100%;
+      position: absolute;
+    }
+    .front {
+      opacity: 0.6;
+      background-color: rgb(253, 255, 59);
+    }
+    .back {
+      opacity: 0.6;
+      background-color: rgb(54, 186, 198);
+    }
+    .a {
+      margin: -225px 0 0 0;
+    }
+    .b {
+      margin: -165px 0 0 165px;
+    }
+    .c {
+      margin: 0 0 0 225px;
+    }
+    .d {
+      margin: 165px 0 0 165px;
+    }
+    .e {
+      margin: 225px 0 0 0;
+    }
+    .f {
+      margin: 165px 0 0 -165px;
+    }
+    .g {
+      margin: 0 0 0 -225px;
+    }
+    .h {
+      margin: -165px 0 0 -165px;
+    }
+
+    .anim_one, .anim_two, .anim_three, .anim_four {
+      animation-duration: 500ms;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    .anim_one {
+      animation-name: anim_one;
+    }
+    @keyframes anim_one {
+      from { transform: translateX(-10px); }
+      to   { transform: translateX(10px); }
+    }
+    .anim_two {
+      animation-name: anim_two;
+    }
+    @keyframes anim_two {
+      from { transform: translateX(-20px); }
+      to   { transform: translateX(20px); }
+    }
+    .anim_three {
+      animation-name: anim_three;
+    }
+    @keyframes anim_three {
+      from { transform: translateX(-30px); }
+      to   { transform: translateX(30px); }
+    }
+    .anim_four {
+      animation-name: anim_four;
+    }
+    @keyframes anim_four {
+      from { transform: translateX(-40px); }
+      to   { transform: translateX(40px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="circle front a slide"></div>
+    <div class="circle back  a"></div>
+
+    <div class="circle front b anim_one"></div>
+    <div class="circle back  b"></div>
+
+    <div class="circle front c anim_two"></div>
+    <div class="circle back  c"></div>
+
+    <div class="circle front d anim_three"></div>
+    <div class="circle back  d"></div>
+
+    <div class="circle front e anim_four"></div>
+    <div class="circle back  e"></div>
+
+    <div class="circle front f anim_three"></div>
+    <div class="circle back  f"></div>
+
+    <div class="circle front g anim_two"></div>
+    <div class="circle back  g"></div>
+
+    <div class="circle front h anim_one"></div>
+    <div class="circle back  h"></div>
+  </div>
+</body>
+</html>

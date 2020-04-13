@@ -1,0 +1,114 @@
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: rgb(255, 132, 42);
+    }
+    .square {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin: -200px 0 0 -200px;
+      height: 400px;
+      width: 400px;
+    }
+    .bars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    .horizontal.bars .bar {
+      width: 100%;
+      height: 10%;
+      float: left;
+    }
+    .vertical.bars .bar {
+      width: 10%;
+      height: 100%;
+      float: left;
+    }
+    .bar {
+      animation: fade 20s linear infinite;
+      animation-direction: alternate;
+    }
+    .a {
+      background-color: rgb(205, 74, 118);
+      animation-delay: 0s;
+    }
+    .b {
+      background-color: rgb(107, 67, 118);
+      animation-delay: -2s;
+    }
+    .c {
+      background-color: rgb(71, 85, 131);
+      animation-delay: -4s;
+    }
+    .d {
+      background-color: rgb(127, 165, 192);
+      animation-delay: -6s;
+    }
+    .e {
+      background-color: rgb(67, 165, 158);
+      animation-delay: -8s;
+    }
+    .f {
+      background-color: rgb(253, 255, 59);
+      animation-delay: -10s;
+    }
+    .g {
+      background-color: rgb(255, 164, 127);
+      animation-delay: -12s;
+    }
+    .h {
+      background-color: rgb(246, 118, 35);
+      animation-delay: -14s;
+    }
+    .i {
+      background-color: rgb(210, 77, 41);
+      animation-delay: -16s;
+    }
+    .j {
+      background-color: rgb(45, 85, 147);
+      animation-delay: -18s;
+    }
+
+    
+    @keyframes fade {
+      from { opacity: 0.2; }
+      to   { opacity: 0.8; }
+    }
+  </style>
+</head>
+<body>
+  <div class="square">
+    <div class="horizontal bars">
+      <div class="bar a"></div>
+      <div class="bar b"></div>
+      <div class="bar c"></div>
+      <div class="bar d"></div>
+      <div class="bar e"></div>
+      <div class="bar f"></div>
+      <div class="bar g"></div>
+      <div class="bar h"></div>
+      <div class="bar i"></div>
+      <div class="bar j"></div>
+    </div>
+    <div class="vertical bars">
+      <div class="bar a"></div>
+      <div class="bar b"></div>
+      <div class="bar c"></div>
+      <div class="bar d"></div>
+      <div class="bar e"></div>
+      <div class="bar f"></div>
+      <div class="bar g"></div>
+      <div class="bar h"></div>
+      <div class="bar i"></div>
+      <div class="bar j"></div>
+    </div>
+  </div>
+</body>
+</html>
