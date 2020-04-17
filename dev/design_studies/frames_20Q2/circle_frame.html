@@ -1,0 +1,55 @@
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: rgb(255, 196, 40);
+    }
+    .frame {
+      /* positioning */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 400px;
+      width: 400px;
+      border-width: 4400px;
+      margin: -4600px 0 0 -4600px;
+      z-index: 9999;
+
+      /* frame style */
+      border-color: rgb(136, 135, 185);
+      border-style: solid;
+
+      /* circle */
+      border-radius: 4600px; 
+    }
+    .circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 400px;
+      width: 400px;
+      margin: -200px 0 0 -200px;
+      border-radius: 100%;
+      background-color: rgb(243, 118, 120);
+    }
+    
+    .slide {
+      animation: slide 10s ease-in-out infinite;
+    }
+    @keyframes slide {
+      0%   { transform: translateX(-50vw);}
+      40%  { transform: translateX(0vw);}
+      60%  { transform: translateX(0vw);}
+      100% { transform: translateX(50vw);}
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="circle slide"></div>
+</body>
+</html>
