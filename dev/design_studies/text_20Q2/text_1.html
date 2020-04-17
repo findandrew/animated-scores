@@ -1,0 +1,63 @@
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: rgb(253, 255, 59);
+    }
+    .text {
+      font-family: sans-serif;
+      font-weight: 900;
+      font-size: 50vmin;
+
+      width: max-content;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      
+      line-height: 0;
+    }
+    .a {
+      color: rgb(42, 87, 131);
+      opacity: 0.7;
+      z-index: 1;
+    }
+    .b {
+      color: rgb(255, 196, 40);
+      opacity: 0.6;
+      z-index: 2;
+    }
+
+    .slide_from_left {
+      animation: slide_from_left 15s linear infinite;
+      right: 100%;
+    }
+    @keyframes slide_from_left {
+      from { transform: translateX(0); }
+      to   { transform: translateX(400vw); }
+    }
+    .slide_from_right {
+      animation: slide_from_right 15s linear infinite;
+      left: 100%;
+    }
+    @keyframes slide_from_right {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-400vw); }
+    }
+
+    .dev {
+      width: fit-content;
+      position: absolute;
+      top: 50%;
+      right: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="text a slide_from_left">SAME TEXT</div>
+  <div class="text b slide_from_right">SAME TEXT</div>
+</body>
+</html>
