@@ -1,0 +1,61 @@
+<!-- General Technique: https://medium.com/@dave_lunny/animating-css-gradients-using-only-css-d2fd7671e759 -->
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      /*background-color: rgb(252, 118, 106);*/
+      background:
+        linear-gradient(
+          90deg
+          ,rgb(253, 113, 51)
+          ,rgb(253, 255, 59)
+        );
+    }
+    .square {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin: -200px 0 0 -200px;
+      height: 400px;
+      width: 400px;
+    }
+    .fade {
+      animation: fade 10s ease-in-out infinite;
+    }
+    .a {
+      background:
+        linear-gradient(
+          90deg
+          ,rgb(253, 113, 51)
+          ,rgb(253, 255, 59)
+        );
+      opacity: 1;
+    }
+    .b {
+      background-color: rgb(253, 255, 59);
+      opacity: 1;
+      animation-delay: 0s;
+    }
+    .c {
+      background-color : rgb(253, 113, 51);
+      opacity: 1;
+      animation-delay: -5s;
+    }
+    @keyframes fade {
+      0%  { opacity: 0.0 }
+      25% { opacity: 1.0 }
+      50% { opacity: 0.0 }
+      100% { opacity: 0.0 }
+    }
+  </style>
+</head>
+<body>
+  <div class="square a"></div>
+  <div class="square b fade"></div>
+  <div class="square c fade"></div>
+</body>
+</html>
