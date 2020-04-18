@@ -1,0 +1,63 @@
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: rgb(224, 140, 185);
+    }
+    .circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 400px;
+      width: 400px;
+      margin: -200px 0 0 -200px;
+      border-radius: 100%;
+    }
+    
+    .bloom {
+      animation: bloom 10s ease-in-out alternate infinite;
+    }
+    @keyframes bloom {
+      from { transform: scale(0.1); }
+      to   { transform: scale(1.5); }
+    }
+
+    .a {
+      animation-delay: 0s;
+      background-color: rgb(99, 61, 109);
+      opacity: 0.8;
+    }
+    .b {
+      animation-delay: -2s;
+      background-color: rgb(99, 114, 81);
+      opacity: 0.7;
+    }
+    .c {
+      animation-delay: -4s;
+      background-color: rgb(57, 72, 104);
+      opacity: 0.6;
+    }
+    .d {
+      animation-delay: -6s;
+      background-color: rgb(216, 70, 82);
+      opacity: 0.5;
+    }
+    .e {
+      animation-delay: -8s;
+      background-color: rgb(255, 196, 40);
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="circle bloom a"></div>
+  <div class="circle bloom b"></div>
+  <div class="circle bloom c"></div>
+  <div class="circle bloom d"></div>
+  <div class="circle bloom e"></div>
+</body>
+</html>
