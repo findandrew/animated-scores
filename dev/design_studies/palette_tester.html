@@ -1,0 +1,131 @@
+<html>
+<head>
+  <style>
+
+    .foc {
+      background-color: rgb(243, 118, 120);
+    }
+    .con.a {
+      background-color: rgb(95, 84, 140);
+    }
+    .con.b {
+      background-color: rgb(253, 255, 59);
+    }
+    .con.c {
+      background-color: rgb(125, 210, 212);
+    }
+    .con.d {
+      background-color: rgb(184, 184, 81);
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .palette {
+      height: 100vh;
+      width: 100vw;
+    }
+    .cont {
+      /* container */
+      width: 35%;
+      height: 80%;
+      position: absolute;
+      top: 10%;
+    }
+
+    .foc {
+      /* focal color */
+      position: absolute;
+      height: 100%;
+    }
+    .con {
+      /* contrast color */
+    }
+
+    .so {
+      /* semi opaque */
+      left: 10%;
+    }
+    .so > * {
+      opacity: 0.5;
+    }
+    .so .foc {
+      right: 0;
+      width: 66%;
+    }
+    .so .con {
+      width: 66%;
+      height: 12.5%;
+      position: absolute;
+    }
+    .so .con.back {
+      z-index: -999;
+    }
+    .so .con.front {
+      z-index: 999;
+    }
+    .so .con.a.back {
+      top: 0%;
+    }
+    .so .con.a.front {
+      top: 12.5%;
+    }
+    .so .con.b.back {
+      top: 25%;
+    }
+    .so .con.b.front {
+      top: 37.5%;
+    }
+    .so .con.c.back {
+      top: 50%;
+    }
+    .so .con.c.front {
+      top: 62.5%;
+    }
+    .so .con.d.back {
+      top: 75%;
+    }
+    .so .con.d.front {
+      top: 87.5%;
+    }
+
+    .o {
+      /* opaque */
+      left: 55%;
+    }
+    .o .foc {
+      left: 0;
+      width: 50%;
+    }
+    .o .con {
+      width: 50%;
+      height: 25%;
+      float: right;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="palette">
+    <div class="cont so">
+      <div class="foc"></div>
+      <div class="con a back"></div>
+      <div class="con a front"></div>
+      <div class="con b back"></div>
+      <div class="con b front"></div>
+      <div class="con c back"></div>
+      <div class="con c front"></div>
+      <div class="con d back"></div>
+      <div class="con d front"></div>
+    </div>
+    <div class="cont o">
+      <div class="foc"></div>
+      <div class="con a"></div>
+      <div class="con b"></div>
+      <div class="con c"></div>
+      <div class="con d"></div>
+    </div>
+  </div>
+</body>
+</html>
