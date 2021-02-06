@@ -1,0 +1,199 @@
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .square {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin: -200px 0 0 -200px;
+      height: 400px;
+      width: 400px;
+    }
+    .square.front {
+      z-index: 9999;
+      opacity: 0.2;
+    }
+    .quadrant {
+      height: 50%;
+      width: 50%;
+      float: left;
+    }
+    .dot {
+      float: left;
+      height: 40%;
+      width: 40%;
+      margin: 5%;
+      border-radius: 100%;
+    }
+    .back .dot {
+      background-color: rgb(108, 58, 98);
+    }
+    .front .dot {
+      background-color: rgb(94, 204, 185);
+    }
+
+    .rotate {
+      animation: rotate infinite;
+    }
+    @keyframes rotate {
+      100% { transform:rotate(360deg); }
+    }
+    .speed-1 {
+      animation-duration: 30s;
+      animation-timing-function: linear;
+    }
+    .speed-2 {
+      animation-duration: 30s;
+      animation-timing-function: ease;
+    }
+    .speed-3 {
+      animation-duration: 30s;
+      animation-timing-function: ease-in;
+    }
+    .speed-4 {
+      animation-duration: 30s;
+      animation-timing-function: ease-out;
+    }
+    .speed-5 {
+      animation-duration: 30s;
+      animation-timing-function: ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="square front rotate speed-1">
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  <div class="square front rotate speed-2">
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  <div class="square front rotate speed-3">
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  <div class="square front rotate speed-4">
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  <div class="square front rotate speed-5">
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="quadrant">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+</body>
+</html>
