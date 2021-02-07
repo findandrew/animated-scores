@@ -1,0 +1,80 @@
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      /*background-image: linear-gradient(to bottom right, rgb(233, 210, 92), rgb(255, 196, 40));*/
+      background-color: rgba(244, 131, 133, .15);
+    }
+    .circle {
+      height: 300px;
+      width: 300px;
+      border-radius: 300px;
+      animation: circleAround ease infinite;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      opacity: 0.6;
+      margin: -150px 0 0 -150px;
+      animation-duration: 20s;
+    }
+    .a {
+      background-color: rgb(156, 144, 196);
+      animation-delay: 0s;
+    }
+    .b {
+      background-color: rgb(0, 153, 123);
+      animation-delay: -0.25s;
+    }
+    .c {
+      background-color: rgb(233, 210, 92);
+      animation-delay: -0.5s;
+    }
+    .d {
+      background-color: rgb(252, 118, 106);
+      animation-delay: -0.75s;
+    }
+    .e {
+      background-color: rgb(108, 58, 98);
+      animation-delay: -0.75s;
+    }
+    .f {
+      background-color: rgb(91, 137, 203);
+      animation-delay: -1.0s;
+    }
+    .g {
+      background-color: rgb(76, 167, 109);
+      animation-delay: -1.25s;
+    }
+    .h {
+      background-color: rgb(255, 196, 40);
+      animation-delay: -1.5s;
+    }
+
+    @keyframes circleAround {
+      0%   { transform: rotate(0deg)   translateX(400px); }
+      10%  { transform: rotate(90deg)   translateX(100px); }
+      20%  { transform: rotate(45deg)   translateX(500px); }
+      30%  { transform: rotate(180deg)   translateX(300px); }
+      40%  { transform: rotate(135deg)   translateX(400px); }
+      50%  { transform: rotate(300deg)   translateX(500px); }
+      60%  { transform: rotate(200deg)   translateX(450px); }
+      70%  { transform: rotate(330deg)   translateX(100px); }
+      80%  { transform: rotate(320deg)   translateX(300px); }
+      90%  { transform: rotate(280deg)   translateX(500px); }
+      100% { transform: rotate(360deg) translateX(400px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle a"></div>
+  <div class="circle b"></div>
+  <div class="circle c"></div>
+  <div class="circle d"></div>
+  <div class="circle e"></div>
+  <div class="circle f"></div>
+  <div class="circle g"></div>
+  <div class="circle h"></div>
+</body>
+</html>
