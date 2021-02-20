@@ -1,0 +1,81 @@
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: rgba(244, 131, 133, .15);
+    }
+    .circle {
+      height: 300px;
+      width: 300px;
+      border-radius: 300px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      opacity: 0.6;
+      margin: -150px 0 0 -150px;
+    }
+    .a {
+      animation: motion-a ease infinite, color-a ease infinite;
+      animation-duration: 20s;
+    }
+    .b {
+      animation: motion-b ease infinite, color-b ease infinite;
+      animation-duration: 20s;
+    }
+    .c {
+      animation: motion-c ease infinite, color-b ease infinite;
+      animation-duration: 20s;
+    }
+
+    @keyframes motion-a {
+      0%   { transform: rotate(0deg)   translateX(400px); }
+      20%  { transform: rotate(45deg)   translateX(500px); }
+      40%  { transform: rotate(135deg)   translateX(400px); }
+      60%  { transform: rotate(200deg)   translateX(450px); }
+      80%  { transform: rotate(320deg)   translateX(300px); }
+      100% { transform: rotate(360deg) translateX(400px); }
+    }
+    @keyframes motion-b {
+      0%   { transform: rotate(0deg)   translateX(400px); }
+      20%  { transform: rotate(200deg)   translateX(500px); }
+      40%  { transform: rotate(20deg)   translateX(400px); }
+      60%  { transform: rotate(180deg)   translateX(450px); }
+      80%  { transform: rotate(300deg)   translateX(300px); }
+      100% { transform: rotate(360deg) translateX(400px); }
+    }
+    @keyframes motion-c {
+      0%   { transform: rotate(200deg)   translateX(400px); }
+      20%  { transform: rotate(20deg)   translateX(500px); }
+      40%  { transform: rotate(300deg)   translateX(400px); }
+      60%  { transform: rotate(160deg)   translateX(450px); }
+      80%  { transform: rotate(340deg)   translateX(300px); }
+      100% { transform: rotate(200deg) translateX(400px); }
+    }
+
+    @keyframes color-a {
+      0%   { background-color: rgb(156, 144, 196); }
+      20%  { background-color: rgb(0, 153, 123);   }
+      40%  { background-color: rgb(233, 210, 92);  }
+      60%  { background-color: rgb(252, 118, 106); }
+      80%  { background-color: rgb(108, 58, 98);   }
+      100% { background-color: rgb(156, 144, 196);  }
+    }
+    @keyframes color-b {
+      0%   { background-color: rgb(108, 58, 98);   }
+      20%  { background-color: rgb(252, 118, 106); }
+      40%  { background-color: rgb(233, 210, 92);  }
+      60%  { background-color: rgb(0, 153, 123);   }
+      80%  { background-color: rgb(91, 137, 203);  }
+      100% { background-color: rgb(108, 58, 98); }
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="circle a"></div>
+  <div class="circle b"></div>
+  <div class="circle c"></div>
+</body>
+</html>
